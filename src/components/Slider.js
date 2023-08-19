@@ -1,10 +1,12 @@
-import Img from "../img/slider-1.jpg";
+import Img from "../img/slider-1.png";
 
 
 export default function Slider() {
     return (
       <div className="slider">
-        <img src={Img} alt="slider-1"/>
+        <div className="slide">
+          <img src={Img} alt="slider-1" />
+        </div>
       </div>
     );
 }
