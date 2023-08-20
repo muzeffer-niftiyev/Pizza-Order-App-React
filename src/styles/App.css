@@ -2,12 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
-body{
-    background-size: cover;
-    background: url(https://themewagon.github.io/pizza/images/bg_4.jpg) no-repeat fixed;
+body {
+  background-size: cover;
+  background: url(https://themewagon.github.io/pizza/images/bg_4.jpg) no-repeat
+    fixed;
 }
 
 nav {
@@ -19,28 +20,25 @@ nav {
   z-index: 11111;
 }
 
-.icon{
-    position: relative;
+.icon {
+  position: relative;
 }
 
-.icon svg{
-    font-size: 33px !important;
+.icon p {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: -35%;
+  right: -45%;
+  background-color: rgba(201, 23, 23);
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.icon p{
-    position: absolute;
-    top: -30%;
-    right: -35%;
-    background-color: rgba(201, 23, 23);
-    border-radius: 50%;
-    padding-top: 4px;
-    padding-right: 2px;
-    width: 26px;
-    height: 26px;
-    text-align: center;
-}
-
-.nav_cont{
+.nav_cont {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -54,13 +52,13 @@ nav header div {
   gap: 9px;
 }
 
-header span{
-    display: block;
-    margin-top: 4px;
-    text-align: center;
-    color: #fac564;
-    letter-spacing: 6px;
-    font-size: 20px;
+header span {
+  display: block;
+  margin-top: 4px;
+  text-align: center;
+  color: #fac564;
+  letter-spacing: 6px;
+  font-size: 20px;
 }
 
 nav header div svg {
@@ -72,71 +70,138 @@ nav h1 {
   font-size: 29px;
 }
 
-nav .options{
+nav .options {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+nav .options svg {
+  font-size: 27px;
+}
+
+nav .options > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 7px;
+}
+
+nav .options div:hover {
+  background-color: #1a1e21;
+}
+
+.desc {
+  font-size: 21px;
+  margin-left: 10px;
+}
+
+.carousel {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url(../img/slider-bg.jpg) no-repeat fixed;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.carousel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  width: 100%;
+  height: 100%;
+  z-index: 1111;
+}
+
+.slides{
     display: flex;
-    gap: 30px;
-    align-items: center;
+    z-index: 12121212212112;
 }
 
-nav .options svg{
-    font-size: 25px;
+.slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 100%;
+  z-index: 111111;
 }
 
-nav .options>div{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-    padding: 15px;
-    border-radius: 7px;
+.slide img {
+  width: 900px;
+  height: 650px;
 }
 
-nav .options div:hover{
-    background-color: #1a1e21;
+.slide span {
+  font-family: "Nothing You Could Do", cursive;
+  color: #fac564;
+  font-size: 35px;
 }
 
-.desc{
-    font-size: 21px;
-    margin-left: 10px;
+.slide h1 {
+  color: #fff;
+  font-family: "Josefin Sans", Arial, sans-serif;
+  font-size: 45px;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  letter-spacing: 3px;
 }
 
-.slider{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: url(../img/slider-bg.jpg) no-repeat fixed;
-    background-size: cover;
+.slide p {
+  color: #ddd;
+  font-size: 19px;
+  width: 45%;
+  text-align: center;
+  line-height: 160%;
 }
 
-.slider img{
-    width: 100vw;
-    height: 100vh;
-    position: relative;
+.slide button {
+  margin-top: 25px;
+  border: 2px solid transparent;
+  background-color: #fac564;
+  color: #333;
+  padding: 20px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
-.slider::before{
-    content: '';
+.slide button:hover {
+  color: #fac564;
+  border: 2px solid #fac564;
+  background-color: transparent;
+}
+
+.dots{
     position: absolute;
-    top: 0;
-    left: 0;
-    
-    background-color: rgba(0,0,0, .4);
-    width: 100%;
-    height: 100%;
-   z-index: 1111;
+    bottom: 150px;
+    z-index: 112121212;
 }
 
-.slide{
+.dots button{
+    width: 30px;
+    height: 30px;
+    margin: 0px 8px;
+    border-radius: 50%;
+    background: none;
+    border: 2px solid #aaa;
+    cursor: pointer;
+}
+
+.dots button span{
+    width: 20px;
+    height: 20px;
+    background-color: #aaa;
+    border-radius: 50%;
+    margin: auto;
     display: flex;
-    align-items: center;
-    width: 70%;
-    height: 50%;
-    z-index: 1111111;
-}
-
-.slide img{
-    width: 900px;
-    height: 650px;
 }
