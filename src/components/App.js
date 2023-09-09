@@ -1,12 +1,12 @@
 import "../styles/App.css";
 import Navbar from "./Navbar";
-import Slider from "./Slider";
+import Carousel from "./Carousel";
 
 export default function App() {
   return (
     <>
       <Navbar />
-      <Slider />
+      <Carousel />
     </>
   );
 }
