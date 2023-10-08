@@ -1,13 +1,15 @@
-export default function Slides({curSlide, slideData}) {
+import styles from './slides.module.css';
+
+const Slides = ({curSlide, slideData}) => {
   return (
-    <div className="slides">
+    <div className={styles.slides}>
       {slideData.map((slide, index) => (
         <div
           key={index}
-          className="slide"
+          className={styles.slide}
           style={{ transform: `translateX(${(index - curSlide) * 100}%)` }}
         >
-          <div className="content">
+          <div className={styles.content}>
             <span>{slide.title}</span>
             <h1>{slide.header}</h1>
             <p>{slide.firstText}</p>
@@ -17,7 +19,7 @@ export default function Slides({curSlide, slideData}) {
             </a>
           </div>
 
-          <div className="image">
+          <div className={styles.image}>
             <img src={slide.imgSrc} alt={slide.imgSrc} />
           </div>
         </div>
@@ -25,3 +27,5 @@ export default function Slides({curSlide, slideData}) {
     </div>
   );
 }
+
+export default Slides;

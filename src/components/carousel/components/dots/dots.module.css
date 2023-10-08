@@ -1,0 +1,33 @@
+.dots {
+  position: absolute;
+  bottom: 140px;
+  z-index: 112121253;
+}
+
+.dots button {
+  width: 26px;
+  height: 26px;
+  margin: 0px 8px;
+  border-radius: 50%;
+  background: none;
+  border: 3px solid gray;
+  cursor: pointer;
+}
+
+.dots button span {
+  width: 14px;
+  height: 14px;
+  background-color: gray;
+  border-radius: 50%;
+  margin: auto;
+  display: flex;
+}
+
+.dots {
+  .active {
+    border: 3px solid #fff;
+  }
+  .active span {
+    background-color: #fff;
+  }
+}

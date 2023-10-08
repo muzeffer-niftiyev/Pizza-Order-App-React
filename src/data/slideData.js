@@ -1,9 +1,6 @@
-import Dots from "./Dots";
-import Slides from "./Slides";
-import slider_1 from "../img/slider-1.png";
-import slider_2 from "../img/slider-2.png";
-import slider_3 from "../img/slider-3.png";
-import { useState, useEffect } from "react";
+import slider_1 from "../assets/img/slider-1.png";
+import slider_2 from "../assets/img/slider-2.png";
+import slider_3 from "../assets/img/slider-3.png";
 
 const slideData = [
   {
@@ -20,7 +17,6 @@ const slideData = [
     header: "Italian Pizza",
     firstText:
       "Our menu is a symphony of flavors, carefully orchestrated to delight your taste buds. Behind every pizza is a story of craftsmanship. Our skilled chefs knead the dough with precision, creating the perfect foundation. Fresh, locally-sourced ingredients are added with care, ensuring quality in every bite.",
-    secondText: " ",
     imgSrc: slider_2,
   },
 
@@ -33,33 +29,4 @@ const slideData = [
   },
 ];
 
-export default function Slider() {
-  const [curSlide, setCurSlide] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const nextSlideIndex = (curSlide + 1) % slideData.length;
-      setCurSlide(nextSlideIndex);
-    }, 2500);
-
-    return () => clearInterval(interval);
-  }, [curSlide]);
-
-  const goToSlide = (index) => {
-    setCurSlide(index);
-  };
-
-  return (
-    <div className="carousel">
-      <Slides
-        slideData={slideData}
-        curSlide={curSlide}
-      />
-      <Dots
-        slideData={slideData}
-        curSlide={curSlide}
-        goToSlide={goToSlide}
-      />
-    </div>
-  );
-}
+export default slideData;

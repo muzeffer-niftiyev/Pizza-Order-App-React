@@ -1,0 +1,86 @@
+nav {
+  background-color: #121618;
+  color: #fff;
+  padding: 16px 0px;
+  position: fixed;
+  width: 100%;
+  z-index: 111111111111111111111111111111;
+}
+
+.icon {
+  position: relative;
+}
+
+.icon p {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: -35%;
+  right: -45%;
+  background-color: rgba(201, 23, 23);
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav_cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  margin: auto;
+}
+
+nav header div {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+header span {
+  display: block;
+  margin-top: 4px;
+  text-align: center;
+  color: #fac564;
+  letter-spacing: 6px;
+  font-size: 20px;
+}
+
+nav header img {
+  width: 30px;
+}
+
+nav h1 {
+  font-family: "Josefin Sans", Arial, sans-serif;
+  font-size: 29px;
+}
+
+nav .options {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+nav .options img {
+  width: 27px;
+}
+
+nav .options > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 7px;
+}
+
+nav .options div:hover {
+  background-color: #1a1e21;
+}
+
+.desc {
+  font-size: 21px;
+  margin-left: 10px;
+}
