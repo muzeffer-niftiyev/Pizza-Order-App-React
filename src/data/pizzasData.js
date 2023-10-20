@@ -18,20 +18,21 @@ import pizzaImg_17 from "../assets/img/pizzas-17.png";
 import pizzaImg_18 from "../assets/img/pizzas-18.png";
 import pizzaImg_19 from "../assets/img/pizzas-19.png";
 import pizzaImg_20 from "../assets/img/pizzas-20.png";
+import pizzaImg_21 from '../assets/img/pizzas-21.png';
 
 const pizzasData = [
   {
     id: 1,
     name: "Marinara",
     ingredients: "Marinara sauce, Garlic, Olive oil, Basil, Oregano",
-    price: 25,
+    price: "$25.00",
     imgUrl: pizzaImg_1,
   },
   {
     id: 2,
     name: "Margherita",
     ingredients: "Tomato sauce, Mozzarella, Olive oil, Basil leaves",
-    price: 20,
+    price: "$20.00",
     imgUrl: pizzaImg_2,
   },
   {
@@ -39,7 +40,7 @@ const pizzasData = [
     name: "Ai Broccoli",
     ingredients:
       "Tomato sauce, Mozzarella, Broccoli, Garlic, Chili peppers, Oregano",
-    price: 12,
+    price: "$12.00",
     imgUrl: pizzaImg_3,
   },
   {
@@ -47,7 +48,7 @@ const pizzasData = [
     name: "Carbonara",
     ingredients:
       "Pecorino Romano Cheese, Heavy cream, Scallions, Eggs, Black pepper",
-    price: 15,
+    price: "$15.00",
     imgUrl: pizzaImg_4,
   },
   {
@@ -55,49 +56,49 @@ const pizzasData = [
     name: "Carpaccio",
     ingredients:
       "Tomato sauce, Mozzarella, Beef carpaccio, Arugula, Parmigiano Reggiano",
-    price: 27,
+    price: "$27.00",
     imgUrl: pizzaImg_5,
   },
   {
     id: 6,
     name: "Funghi",
     ingredients: "Tomato Sauce, Mozzarella, Fresh mushrooms",
-    price: 22,
+    price: "$22.00",
     imgUrl: pizzaImg_6,
   },
   {
     id: 7,
     name: "Gamberetti",
     ingredients: "Tomato sauce, Mozzarella, Shrimps",
-    price: 18,
+    price: "$18.00",
     imgUrl: pizzaImg_7,
   },
   {
     id: 8,
     name: "Mazza",
     ingredients: "Tomato sauce, Mozzarella, Bacon, Eggs, Onions, Chili peppers",
-    price: 30,
+    price: "$30.00",
     imgUrl: pizzaImg_8,
   },
   {
     id: 9,
     name: "Mozzarella",
     ingredients: "Tomato Sauce, Buffalo mozzarella",
-    price: 20,
+    price: "$20.00",
     imgUrl: pizzaImg_9,
   },
   {
     id: 10,
     name: "Napoletana",
-    ingredients: "Tomato sauce, Mozzarella, Anchovies and Olive oil",
-    price: 24,
+    ingredients: "Tomato sauce, Mozzarella, Anchovies, Olive oil",
+    price: "$24.00",
     imgUrl: pizzaImg_10,
   },
   {
     id: 11,
     name: "Peperoni",
     ingredients: "Tomato sauce, Mozzarella, Chili peppers",
-    price: 28,
+    price: "$28.00",
     imgUrl: pizzaImg_11,
   },
 
@@ -105,43 +106,43 @@ const pizzasData = [
     id: 12,
     name: "Piccantino",
     ingredients: "Tomato sauce, Mozzarella, Salame piccantino",
-    price: 22,
+    price: "$22.00",
     imgUrl: pizzaImg_12,
   },
   {
     id: 13,
     name: "Regina",
     ingredients: "Tomato sauce, Mozzarella, Ham, Champignons",
-    price: 25,
+    price: "$25.00",
     imgUrl: pizzaImg_13,
   },
   {
     id: 14,
     name: "Salmone",
     ingredients:
-      "Tomato sauce, Mascarpone cheese, Smoked salmon and rocket salad ",
-    price: 28,
+      "Tomato sauce, Mascarpone cheese, Smoked salmon, rocket salad ",
+    price: "$28.00",
     imgUrl: pizzaImg_14,
   },
   {
     id: 15,
     name: "Spinaci",
     ingredients: "Tomato sauce, Mozzarella, Spinach, Salt, Pepper, Olive oil",
-    price: 24,
+    price: "$24.00",
     imgUrl: pizzaImg_15,
   },
   {
     id: 16,
     name: "Vegetariana",
     ingredients: "Tomato sauce, Mozzarella, Vegetables",
-    price: 20,
+    price: "$20.00",
     imgUrl: pizzaImg_16,
   },
   {
     id: 17,
     name: "Viennese",
     ingredients: "Tomato sauce, Mozzarella, German sausage, Oregano, Olive oil",
-    price: 20,
+    price: "$20.00",
     imgUrl: pizzaImg_17,
   },
   {
@@ -149,7 +150,7 @@ const pizzasData = [
     name: "Tartufata",
     ingredients:
       "Mozzarella, Mushrooms, Oyster mushrooms, Arugula, Parmesan, Truffle oil",
-    price: 22,
+    price: "$22.00",
     imgUrl: pizzaImg_18,
   },
   {
@@ -157,7 +158,7 @@ const pizzasData = [
     name: "Tirolese",
     ingredients:
       "Tomato sauce, Stracchino cheese, Speck (smoked ham), sometimes mushrooms",
-    price: 25,
+    price: "$25.00",
     imgUrl: pizzaImg_19,
   },
   {
@@ -165,8 +166,16 @@ const pizzasData = [
     name: "Toscana",
     ingredients:
       "Tomato sauce, Pecorino cheese, Bell pepper, Anchovies or tuna, Fresh basil leafes",
-    price: 30,
+    price: "$30.00",
     imgUrl: pizzaImg_20,
+  },
+  {
+    id: 21,
+    name: "Diavola",
+    ingredients:
+      "Tomato sauce, Mozzarella, Hot Italian salami, Hot chili peppers",
+    price: "$27.00",
+    imgUrl: pizzaImg_21,
   },
 ];
 

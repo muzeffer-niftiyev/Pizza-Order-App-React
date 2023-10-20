@@ -1,29 +1,31 @@
 import Dots from "./components/dots/Dots";
 import Slides from "./components/slides/Slides";
 import slideData from "../../data/slideData";
-import styles from './carousel.module.css'
-import { useState, useEffect } from "react";
+import styles from './carousel.module.css';
+import { useEffect } from "react";
+import { goToNextSlide, goToSlide } from "../../features/carouselSlice/carouselSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 const Carousel = () => {
-  const [curSlide, setCurSlide] = useState(0);
+  const curSlide = useSelector(state => state.carousel.curSlide);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const interval = setInterval(() => {
-      const nextSlideIndex = (curSlide + 1) % slideData.length;
-      setCurSlide(nextSlideIndex);
+      dispatch(goToNextSlide())
     }, 3500);
 
     return () => clearInterval(interval);
-  }, [curSlide]);
+  }, []);
 
-  const goToSlide = (index) => {
-    setCurSlide(index);
+  const goToSlideHandler = (index) => {
+    dispatch(goToSlide(index))
   };
 
   return (
     <div className={styles.carousel}>
       <Slides slideData={slideData} curSlide={curSlide} />
-      <Dots slideData={slideData} curSlide={curSlide} goToSlide={goToSlide} />
+      <Dots slideData={slideData} curSlide={curSlide} goToSlide={goToSlideHandler} />
     </div>
   );
 }
