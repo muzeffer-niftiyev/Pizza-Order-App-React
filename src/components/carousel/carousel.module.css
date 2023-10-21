@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(../../assets/img/slider-bg.jpg) no-repeat fixed;
+  background: url(../../assets/img/slides/slider-bg.jpg) no-repeat fixed;
   background-size: cover;
   overflow: hidden;
 }

@@ -1,6 +1,6 @@
-import slider_1 from "../assets/img/slider-1.png";
-import slider_2 from "../assets/img/slider-2.png";
-import slider_3 from "../assets/img/slider-3.png";
+import slider_1 from "../assets/img/slides/slider-1.png";
+import slider_2 from "../assets/img/slides/slider-2.png";
+import slider_3 from "../assets/img/slides/slider-3.png";
 
 const slideData = [
   {

@@ -9,7 +9,7 @@
   text-align: center;
 }
 
-.menu_header h3{
+.menu_header h3 {
   color: #fac564;
   font-size: 40px;
   margin: 80px 0px;
@@ -18,11 +18,11 @@
   letter-spacing: 4px;
 }
 
-.menu_options{
+.menu_options {
   margin-bottom: 70px;
 }
 
-.menu_options button{
+.menu_options a {
   border: 1px solid #fac564;
   background-color: transparent;
   color: #fac564;
@@ -30,10 +30,17 @@
   font-size: 20px;
   cursor: pointer;
   margin-right: 10px;
-  transition: all .3s;
+  transition: all 0.3s;
+  text-decoration: none;
 }
 
-.menu_options button:hover{
+.menu_options a:hover {
   background-color: #fac564;
   color: #1a1e21;
+}
+
+
+.active{
+  background-color: #fac564 !important;
+  color: #1a1e21 !important;
 }

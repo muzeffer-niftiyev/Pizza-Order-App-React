@@ -2,9 +2,11 @@ import styles from "./navbar.module.css";
 import pizzaIcon from "../../assets/icons/header-pizza-icon.svg";
 import likedCountIcon from "../../assets/icons/header-liked-count-icon.svg";
 import cartCountIcon from "../../assets/icons/header-cart-count-icon.svg";
-
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
+  const cartItems = useSelector((state) => state.cartItem.cartItems);
+
   return (
     <nav>
       <div className={styles.nav_cont}>
@@ -29,7 +31,7 @@ const Navbar = () => {
           <div>
             <div className={styles.icon}>
               <img src={cartCountIcon} alt="" />
-              <p>10</p>
+              <p>{cartItems.length}</p>
             </div>
             <p className={styles.desc}>Cart</p>
           </div>

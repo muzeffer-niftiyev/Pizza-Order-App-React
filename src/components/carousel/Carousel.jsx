@@ -16,7 +16,7 @@ const Carousel = () => {
     }, 3500);
 
     return () => clearInterval(interval);
-  }, []);
+  });
 
   const goToSlideHandler = (index) => {
     dispatch(goToSlide(index))

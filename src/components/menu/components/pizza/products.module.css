@@ -12,7 +12,7 @@
   position: relative;
   padding: 15px;
   margin: auto;
-  width: 550px;
+  width: 570px;
   height: 400px;
   display: flex;
   justify-content: center;
@@ -26,7 +26,7 @@
   margin-bottom: 10px;
 }
 
-.pizza_data {
+.product_data {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -36,21 +36,21 @@
   height: 100%;
 }
 
-.pizza_data h4 {
-  margin: 0px 15px;
+.product_data h4 {
+  margin: 0px 12px;
   color: #ecf0f1;
   font-size: 34px;
 }
 
-.pizza_data p {
+.product_data p {
   color: #ecf0f1;
-  margin: 5px 15px;
+  margin: 5px 12px;
   text-align: left;
 }
 
-.pizza_data > span {
+.product_data > span {
   color: rgb(111, 163, 240);
-  margin: 10px 15px;
+  margin: 10px 12px;
   font-weight: bolder;
   font-size: 29px;
 }
@@ -93,6 +93,28 @@
   width: 45px;
 }
 
+.size{
+  margin: 5px 12px;
+  display: flex;
+  gap: 4px;
+}
+
+.size button{
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #333;
+  border: none;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+
+.size button:hover{
+  background-color: #096f9b;
+  color: #ecf0f1;
+}
 
 
 
