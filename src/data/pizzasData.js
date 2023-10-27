@@ -18,183 +18,246 @@ import pizzaImg_17 from "../assets/img/pizzas/pizzas-17.png";
 import pizzaImg_18 from "../assets/img/pizzas/pizzas-18.png";
 import pizzaImg_19 from "../assets/img/pizzas/pizzas-19.png";
 import pizzaImg_20 from "../assets/img/pizzas/pizzas-20.png";
-import pizzaImg_21 from '../assets/img/pizzas/pizzas-21.png';
+import pizzaImg_21 from "../assets/img/pizzas/pizzas-21.png";
 
 const pizzasData = [
   {
     id: 1,
     name: "Marinara",
     details: "Marinara sauce, Garlic, Olive oil, Basil, Oregano",
-    price: 25,
     imgUrl: pizzaImg_1,
-    sizes: ["Small", "Medium", "Large"],
+    options: [
+      { size: "Small", price: 14 },
+      { size: "Medium", price: 18 },
+      { size: "Large", price: 25 },
+    ],
   },
   {
     id: 2,
     name: "Margherita",
     details: "Tomato sauce, Mozzarella, Olive oil, Basil leaves",
-    price: 20,
     imgUrl: pizzaImg_2,
-    sizes: ["Small", "Medium", "Large"],
+    options: [
+      { size: "Small", price: 12 },
+      { size: "Medium", price: 16 },
+      { size: "Large", price: 20 },
+    ],
   },
   {
     id: 3,
     name: "Ai Broccoli",
     details:
       "Tomato sauce, Mozzarella, Broccoli, Garlic, Chili peppers, Oregano",
-    price: 12,
     imgUrl: pizzaImg_3,
-    sizes: ["Small", "Medium", "Large"],
+    options: [
+      { size: "Small", price: 8 },
+      { size: "Medium", price: 10 },
+      { size: "Large", price: 12 },
+    ],
   },
   {
     id: 4,
     name: "Carbonara",
     details:
       "Pecorino Romano Cheese, Heavy cream, Scallions, Eggs, Black pepper",
-    price: 15,
     imgUrl: pizzaImg_4,
-    sizes: ["Small", "Medium", "Large"],
+    options: [
+      { size: "Small", price: 8 },
+      { size: "Medium", price: 12 },
+      { size: "Large", price: 15 },
+    ],
   },
   {
     id: 5,
     name: "Carpaccio",
     details:
       "Tomato sauce, Mozzarella, Beef carpaccio, Arugula, Parmigiano Reggiano",
-    price: 27,
     imgUrl: pizzaImg_5,
-    sizes: ["Small", "Medium", "Large"],
+    options: [
+      { size: "Small", price: 18 },
+      { size: "Medium", price: 22 },
+      { size: "Large", price: 27 },
+    ],
   },
   {
     id: 6,
     name: "Funghi",
     details: "Tomato Sauce, Mozzarella, Fresh mushrooms",
-    price: 22,
     imgUrl: pizzaImg_6,
-    sizes: ["Small", "Medium", "Large"],
+    options: [
+      { size: "Small", price: 14 },
+      { size: "Medium", price: 18 },
+      { size: "Large", price: 22 },
+    ],
   },
   {
     id: 7,
     name: "Gamberetti",
     details: "Tomato sauce, Mozzarella, Shrimps",
-    price: 18,
     imgUrl: pizzaImg_7,
-    sizes: ["Small", "Medium", "Large"],
+    options: [
+      { size: "Small", price: 10 },
+      { size: "Medium", price: 14 },
+      { size: "Large", price: 18 },
+    ],
   },
   {
     id: 8,
     name: "Mazza",
     details: "Tomato sauce, Mozzarella, Bacon, Eggs, Onions, Chili peppers",
-    price: 30,
     imgUrl: pizzaImg_8,
-    sizes: ["Small", "Medium", "Large"],
+    options: [
+      { size: "Small", price: 20 },
+      { size: "Medium", price: 26 },
+      { size: "Large", price: 30 },
+    ],
   },
   {
     id: 9,
     name: "Mozzarella",
     details: "Tomato Sauce, Buffalo mozzarella",
-    price: 20,
     imgUrl: pizzaImg_9,
-    sizes: ["Small", "Medium", "Large"],
+    options: [
+      { size: "Small", price: 12 },
+      { size: "Medium", price: 16 },
+      { size: "Large", price: 20 },
+    ],
   },
   {
     id: 10,
     name: "Napoletana",
     details: "Tomato sauce, Mozzarella, Anchovies, Olive oil",
-    price: 24,
     imgUrl: pizzaImg_10,
-    sizes: ["Small", "Medium", "Large"],
+    options: [
+      { size: "Small", price: 16 },
+      { size: "Medium", price: 20 },
+      { size: "Large", price: 24 },
+    ],
   },
   {
     id: 11,
     name: "Peperoni",
     details: "Tomato sauce, Mozzarella, Chili peppers",
-    price: 28,
     imgUrl: pizzaImg_11,
-    sizes: ["Small", "Medium", "Large"],
+    options: [
+      { size: "Small", price: 18 },
+      { size: "Medium", price: 22 },
+      { size: "Large", price: 28 },
+    ],
   },
 
   {
     id: 12,
     name: "Piccantino",
     details: "Tomato sauce, Mozzarella, Salame piccantino",
-    price: 22,
     imgUrl: pizzaImg_12,
-    sizes: ["Small", "Medium", "Large"],
+    options: [
+      { size: "Small", price: 14 },
+      { size: "Medium", price: 18 },
+      { size: "Large", price: 22 },
+    ],
   },
   {
     id: 13,
     name: "Regina",
     details: "Tomato sauce, Mozzarella, Ham, Champignons",
-    price: 25,
     imgUrl: pizzaImg_13,
-    sizes: ["Small", "Medium", "Large"],
+    options: [
+      { size: "Small", price: 15 },
+      { size: "Medium", price: 19 },
+      { size: "Large", price: 25 },
+    ],
   },
   {
     id: 14,
     name: "Salmone",
     details: "Tomato sauce, Mascarpone cheese, Smoked salmon, rocket salad ",
-    price: 28,
     imgUrl: pizzaImg_14,
-    sizes: ["Small", "Medium", "Large"],
+    options: [
+      { size: "Small", price: 20 },
+      { size: "Medium", price: 24 },
+      { size: "Large", price: 28 },
+    ],
   },
   {
     id: 15,
     name: "Spinaci",
     details: "Tomato sauce, Mozzarella, Spinach, Salt, Pepper, Olive oil",
-    price: 24,
     imgUrl: pizzaImg_15,
-    sizes: ["Small", "Medium", "Large"],
+    options: [
+      { size: "Small", price: 16 },
+      { size: "Medium", price: 20 },
+      { size: "Large", price: 24 },
+    ],
   },
   {
     id: 16,
     name: "Vegetariana",
     details: "Tomato sauce, Mozzarella, Vegetables",
-    price: 20,
     imgUrl: pizzaImg_16,
-    sizes: ["Small", "Medium", "Large"],
+    options: [
+      { size: "Small", price: 12 },
+      { size: "Medium", price: 16 },
+      { size: "Large", price: 20 },
+    ],
   },
   {
     id: 17,
     name: "Viennese",
     details: "Tomato sauce, Mozzarella, German sausage, Oregano, Olive oil",
-    price: 20,
     imgUrl: pizzaImg_17,
-    sizes: ["Small", "Medium", "Large"],
+    options: [
+      { size: "Small", price: 10 },
+      { size: "Medium", price: 14 },
+      { size: "Large", price: 26 },
+    ],
   },
   {
     id: 18,
     name: "Tartufata",
     details:
       "Mozzarella, Mushrooms, Oyster mushrooms, Arugula, Parmesan, Truffle oil",
-    price: 22,
     imgUrl: pizzaImg_18,
-    sizes: ["Small", "Medium", "Large"],
+    options: [
+      { size: "Small", price: 14 },
+      { size: "Medium", price: 18 },
+      { size: "Large", price: 22 },
+    ],
   },
   {
     id: 19,
     name: "Tirolese",
     details:
       "Tomato sauce, Stracchino cheese, Speck (smoked ham), sometimes mushrooms",
-    price: 25,
     imgUrl: pizzaImg_19,
-    sizes: ["Small", "Medium", "Large"],
+    options: [
+      { size: "Small", price: 16 },
+      { size: "Medium", price: 20 },
+      { size: "Large", price: 25 },
+    ],
   },
   {
     id: 20,
     name: "Toscana",
     details:
       "Tomato sauce, Pecorino cheese, Bell pepper, Anchovies or tuna, Fresh basil leafes",
-    price: 30,
     imgUrl: pizzaImg_20,
-    sizes: ["Small", "Medium", "Large"],
+    options: [
+      { size: "Small", price: 22 },
+      { size: "Medium", price: 26 },
+      { size: "Large", price: 30 },
+    ],
   },
   {
     id: 21,
     name: "Diavola",
     details: "Tomato sauce, Mozzarella, Hot Italian salami, Hot chili peppers",
-    price: 27,
     imgUrl: pizzaImg_21,
-    sizes: ["Small", "Medium", "Large"],
+    options: [
+      { size: "Small", price: 18 },
+      { size: "Medium", price: 23 },
+      { size: "Large", price: 27 },
+    ],
   },
 ];
 

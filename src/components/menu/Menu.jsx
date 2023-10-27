@@ -1,5 +1,5 @@
 import styles from "./menu.module.css";
-import Foods from "./components/pizza/Products";
+import Products from "./components/pizza/Products";
 import pizzasData from "../../data/pizzasData";
 import drinksData from '../../data/drinksData';
 import { Route, Routes, NavLink } from "react-router-dom";
@@ -38,10 +38,10 @@ const Menu = () => {
       </div>
 
       <Routes>
-        <Route index path="/" element={<Foods data={pizzasData}/>} />
-        <Route path="/drinks" element={<Foods data={drinksData}/>} />
-        <Route path="/salad" element={<Foods />} />
-        <Route path="/sauce" element={<Foods />} />
+        <Route index path="/" element={<Products data={pizzasData}/>} />
+        <Route path="/drinks" element={<Products data={drinksData}/>} />
+        <Route path="/salad" element={<Products />} />
+        <Route path="/sauce" element={<Products />} />
       </Routes>
     </div>
   );
