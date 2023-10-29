@@ -1,10 +1,14 @@
 import styles from "./menu.module.css";
-import Products from "./components/pizza/Products";
-import pizzasData from "../../data/pizzasData";
-import drinksData from '../../data/drinksData';
-import { Route, Routes, NavLink } from "react-router-dom";
+import Products from "./components/products";
+import pizzasData from "../../data/pizzas-data";
+import drinksData from "../../data/drinks-data";
+import saladsData from "../../data/salads-data";
+import { Route, Routes, NavLink, useLocation } from "react-router-dom";
 
 const Menu = () => {
+  const location = useLocation();
+  const key = location.pathname;
+
   return (
     <div className={styles.menu_container}>
       <div className={styles.menu_header}>
@@ -38,10 +42,20 @@ const Menu = () => {
       </div>
 
       <Routes>
-        <Route index path="/" element={<Products data={pizzasData}/>} />
-        <Route path="/drinks" element={<Products data={drinksData}/>} />
-        <Route path="/salad" element={<Products />} />
-        <Route path="/sauce" element={<Products />} />
+        <Route
+          index
+          path="/"
+          element={<Products key={key} data={pizzasData} />}
+        />
+        <Route
+          path="/drinks"
+          element={<Products key={key} data={drinksData} />}
+        />
+        <Route
+          path="/salad"
+          element={<Products key={key} data={saladsData} />}
+        />
+        <Route path="/sauce" element={<Products key={key} />} />
       </Routes>
     </div>
   );

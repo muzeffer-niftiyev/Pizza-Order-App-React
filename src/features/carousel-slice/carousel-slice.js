@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import slideData from "../../data/slideData";
+import slideData from "../../data/slide-data";
 
 export const carouselSlice = createSlice({
   name: "carousel",

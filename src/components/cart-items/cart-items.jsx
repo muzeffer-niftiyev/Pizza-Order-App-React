@@ -1,4 +1,4 @@
-import styles from "./cartItems.module.css";
+import styles from "./cart-items.module.css";
 import { useSelector } from "react-redux";
 import cartIcon from "../../assets/icons/red-cart-icon.svg";
 import clearPageIcon from "../../assets/icons/clear-items.svg";
@@ -6,13 +6,13 @@ import leftArrowIcon from "../../assets/icons/left-arrow.svg";
 import sadEmojiIcon from "../../assets/icons/sad-emoji.svg";
 import trashIcon from "../../assets/icons/trash.svg";
 
-const CartItems = () => {
+const CartItems = ({cartIsOpen, backBtnHandler}) => {
   const cartItems = useSelector((state) => state.cartItem.cartItems);
 
   return (
-    <div className={styles.cont}>
+    <div className={cartIsOpen ? `${styles.cont} ${styles.show}` : styles.cont}>
       <div className={styles.header}>
-        <button>
+        <button onClick={() => backBtnHandler()}>
           <img src={leftArrowIcon} alt="" />
         </button>
         <h2>

@@ -1,10 +1,11 @@
 import styles from "./products.module.css";
-import likedIcon from "../../../../assets/icons/header-liked-count-icon.svg";
-import { addToCart } from "../../../../features/cartItemsSlice/cartItemsSlice";
+import likedIcon from "../../../assets/icons/header-liked-count-icon.svg";
+import { addToCart } from "../../../features/cart-items-slice/cart-items-slice";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
 
 const formatIngredients = (product) => {
+  if (!product.details) return;
   const details = product.details.split(",");
   return details.length > 3
     ? `${details.slice(0, 3).join(",")}...`
@@ -19,7 +20,9 @@ const Products = ({ data }) => {
     dispatch(
       addToCart({
         name: product.name,
-        img: product.imgUrl,
+        img: product.imgUrl
+          ? product.imgUrl
+          : product.options[selectedOption[index]].img,
         price: product.options[selectedOption[index]].price,
       })
     );
@@ -29,13 +32,20 @@ const Products = ({ data }) => {
     const newIndices = [...selectedOption];
     newIndices[index] = sizeIndex;
     setSelectedOption(newIndices);
-  }
+  };
 
   return (
     <div className={styles.container}>
       {data.map((product, index) => (
         <div key={product.id} className={styles.box}>
-          <img src={product.imgUrl} alt="product" />
+          <img
+            src={
+              product.imgUrl
+                ? product.imgUrl
+                : product.options[selectedOption[index]].img
+            }
+            alt="product"
+          />
           <div className={styles.product_data}>
             <h4>{product.name}</h4>
             <p>{formatIngredients(product)}</p>

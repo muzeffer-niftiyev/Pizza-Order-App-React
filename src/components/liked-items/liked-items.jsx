@@ -1,4 +1,4 @@
-import styles from "./likedItems.module.css";
+import styles from "./liked-items.module.css";
 
 const LikedItems = () => {
   return <></>;

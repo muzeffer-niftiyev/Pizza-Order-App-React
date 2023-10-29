@@ -63,20 +63,25 @@ nav .options {
   align-items: center;
 }
 
-nav .options img {
+nav .options button img {
   width: 27px;
 }
 
-nav .options > div {
+nav .options > button {
   display: flex;
   align-items: center;
   gap: 10px;
   cursor: pointer;
+  color: #fff;
+  background-color: inherit;
   padding: 15px;
+  font-weight: bold;
   border-radius: 7px;
+  border: none;
+  outline: none;
 }
 
-nav .options div:hover {
+nav .options button:hover {
   background-color: #1a1e21;
 }
 
