@@ -5,9 +5,28 @@ import clearPageIcon from "../../assets/icons/clear-items.svg";
 import leftArrowIcon from "../../assets/icons/left-arrow.svg";
 import sadEmojiIcon from "../../assets/icons/sad-emoji.svg";
 import trashIcon from "../../assets/icons/trash.svg";
+import {
+  increaseCount,
+  decreaseCount,
+  removeFromCart,
+} from "../../features/cart-items-slice/cart-items-slice";
+import { useDispatch } from "react-redux";
 
-const CartItems = ({cartIsOpen, backBtnHandler}) => {
+const CartItems = ({ cartIsOpen, backBtnHandler }) => {
+  const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cartItem.cartItems);
+
+  const decreaseHandler = (product) => {
+    dispatch(decreaseCount(product.id));
+  };
+
+  const increaseHandler = (product) => {
+    dispatch(increaseCount(product.id));
+  };
+
+  const removeItemHandler = (product) => {
+    dispatch(removeFromCart(product.id));
+  };
 
   return (
     <div className={cartIsOpen ? `${styles.cont} ${styles.show}` : styles.cont}>
@@ -30,25 +49,54 @@ const CartItems = ({cartIsOpen, backBtnHandler}) => {
       ) : (
         <div className={styles.content}>
           <div className={styles.cart_items}>
-            {cartItems.map((pizza) => {
+            {cartItems.map((product) => {
               return (
-                <div className={styles.item}>
-                  <img src={pizza.img} alt="" />
-                  <div>
-                    <h3>{pizza.name}</h3>
-                    <span>${pizza.price}.00</span>
+                <div className={styles.item} key={product.id}>
+                  <img src={product.img} alt="" />
+                  <div className={styles.datas}>
+                    <div>
+                      <h3>{product.name}</h3>
+                      <span>({product.size})</span>
+                    </div>
+                    <span>${product.price}0</span>
                   </div>
                   <div className={styles.amount}>
-                    <button>-</button>
-                    <span>1</span>
-                    <button>+</button>
+                    <button onClick={() => decreaseHandler(product)}>-</button>
+                    <span>{product.count}</span>
+                    <button onClick={() => increaseHandler(product)}>+</button>
                   </div>
-                  <button className={styles.delete_item}>
+                  <button
+                    className={styles.delete_item}
+                    onClick={() => removeItemHandler(product)}
+                  >
                     <img src={trashIcon} alt="" />
                   </button>
                 </div>
               );
             })}
+          </div>
+          <div className={styles.price}>
+            <div className={styles.price_cont}>
+              <div>
+                <h3>Sub Total</h3>
+                <span>-</span>
+                <span>$price</span>
+              </div>
+              <div>
+                <h3>Delivery</h3>
+                <span>-</span>
+                <span>$ 5.00</span>
+              </div>
+              <div className={styles.line}></div>
+
+              <div>
+                <h2>TOTAL</h2>
+                <span>-</span>
+                <span>$priceTotal</span>
+              </div>
+
+              <button>Order Now</button>
+            </div>
           </div>
         </div>
       )}

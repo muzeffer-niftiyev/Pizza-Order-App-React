@@ -4,27 +4,27 @@ import caprese from "../assets/img/salads/caprese.png";
 
 const saladsData = [
   {
-    id: 1,
     name: "Casear Salad",
+    details: "Dijon mustard, Crouton, Garlic, Yolk, Parmesan",
     options: [
-      { size: "Small", price: 4, img: casear },
-      { size: "Large", price: 7, img: casear },
+      { id: 1,size: "Small", price: '4.0', img: casear },
+      { id: 2,size: "Large", price: '7.5', img: casear },
     ],
   },
   {
-    id: 2,
     name: "Greek Salad",
+    details: "Red onion, Feta cheese, Green bell pepper, Cucumbers, Tomatoes",
     options: [
-      { size: "Small", price: 5, img: greek },
-      { size: "Large", price: 9, img: greek },
+      { id: 3,size: "Small", price: '5.0', img: greek },
+      { id: 4,size: "Large", price: '9.0', img: greek },
     ],
   },
   {
-    id: 3,
     name: "Caprese Salad",
+    details: "Creamy mozzarella, Juicy tomatoes, Basil leaves",
     options: [
-      { size: "Small", price: 3, img: caprese },
-      { size: "Large", price: 5, img: caprese },
+      { id: 5,size: "Small", price: '3.5', img: caprese },
+      { id: 6,size: "Large", price: '5.0', img: caprese },
     ],
   },
 ];

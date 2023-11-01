@@ -17,13 +17,15 @@ const Products = ({ data }) => {
   const [selectedOption, setSelectedOption] = useState(data.map(() => 0));
 
   const addToCartBtnHandler = (product, index) => {
+    const curOption = product.options[selectedOption[index]];
+
     dispatch(
       addToCart({
+        id: curOption.id,
         name: product.name,
-        img: product.imgUrl
-          ? product.imgUrl
-          : product.options[selectedOption[index]].img,
-        price: product.options[selectedOption[index]].price,
+        img: product.imgUrl ? product.imgUrl : curOption.img,
+        price: curOption.price,
+        size: curOption.size,
       })
     );
   };
@@ -37,7 +39,7 @@ const Products = ({ data }) => {
   return (
     <div className={styles.container}>
       {data.map((product, index) => (
-        <div key={product.id} className={styles.box}>
+        <div key={product.options[selectedOption[index]].id} className={styles.box}>
           <img
             src={
               product.imgUrl
@@ -50,7 +52,7 @@ const Products = ({ data }) => {
             <h4>{product.name}</h4>
             <p>{formatIngredients(product)}</p>
             <div className={styles.size}>
-              {product.options.map(({ size }, sizeIndex) => (
+              {product?.options.map(({ size }, sizeIndex) => (
                 <button
                   key={sizeIndex}
                   className={
@@ -64,7 +66,7 @@ const Products = ({ data }) => {
                 </button>
               ))}
             </div>
-            <span>${product.options[selectedOption[index]].price}.00</span>
+            <span>${product.options[selectedOption[index]].price}0</span>
           </div>
           <button className={styles.liked_btn}>
             <img src={likedIcon} alt="" />

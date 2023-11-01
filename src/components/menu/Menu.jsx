@@ -3,6 +3,7 @@ import Products from "./components/products";
 import pizzasData from "../../data/pizzas-data";
 import drinksData from "../../data/drinks-data";
 import saladsData from "../../data/salads-data";
+import saucesData from "../../data/sauces-data";
 import { Route, Routes, NavLink, useLocation } from "react-router-dom";
 
 const Menu = () => {
@@ -55,7 +56,10 @@ const Menu = () => {
           path="/salad"
           element={<Products key={key} data={saladsData} />}
         />
-        <Route path="/sauce" element={<Products key={key} />} />
+        <Route
+          path="/sauce"
+          element={<Products key={key} data={saucesData} />}
+        />
       </Routes>
     </div>
   );
