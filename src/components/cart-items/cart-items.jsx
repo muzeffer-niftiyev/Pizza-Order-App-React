@@ -9,12 +9,16 @@ import {
   increaseCount,
   decreaseCount,
   removeFromCart,
+  clearCart
 } from "../../features/cart-items-slice/cart-items-slice";
 import { useDispatch } from "react-redux";
+import { useEffect, useState } from "react";
+const deliveryPrice = 5;
 
 const CartItems = ({ cartIsOpen, backBtnHandler }) => {
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cartItem.cartItems);
+  const [amount, setAmount] = useState(0);
 
   const decreaseHandler = (product) => {
     dispatch(decreaseCount(product.id));
@@ -28,16 +32,28 @@ const CartItems = ({ cartIsOpen, backBtnHandler }) => {
     dispatch(removeFromCart(product.id));
   };
 
+  const clearCartHandler = () => {
+    dispatch(clearCart());
+  }
+
+  useEffect(() => {
+    const totalAmount = cartItems?.reduce(
+      (acc, item) => acc + +item.price * item.count,
+      0
+    );
+    setAmount(totalAmount);
+  }, [cartItems]);
+
   return (
     <div className={cartIsOpen ? `${styles.cont} ${styles.show}` : styles.cont}>
       <div className={styles.header}>
-        <button onClick={() => backBtnHandler()}>
+        <button onClick={backBtnHandler}>
           <img src={leftArrowIcon} alt="" />
         </button>
         <h2>
           Cart <img src={cartIcon} alt="icon" />
         </h2>
-        <button className={styles.clear_btn}>
+        <button className={styles.clear_btn} onClick={clearCartHandler}>
           Clear <img src={clearPageIcon} alt="" />
         </button>
       </div>
@@ -80,21 +96,20 @@ const CartItems = ({ cartIsOpen, backBtnHandler }) => {
               <div>
                 <h3>Sub Total</h3>
                 <span>-</span>
-                <span>$price</span>
+                <span>$ {amount}</span>
               </div>
               <div>
                 <h3>Delivery</h3>
                 <span>-</span>
-                <span>$ 5.00</span>
+                <span>$ {deliveryPrice}</span>
               </div>
               <div className={styles.line}></div>
 
               <div>
                 <h2>TOTAL</h2>
                 <span>-</span>
-                <span>$priceTotal</span>
+                <span>$ {amount + deliveryPrice}</span>
               </div>
-
               <button>Order Now</button>
             </div>
           </div>
