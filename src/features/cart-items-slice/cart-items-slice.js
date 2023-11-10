@@ -29,21 +29,28 @@ export const cartItemsSlice = createSlice({
       const index = state.cartItems.findIndex(
         (item) => item.id === action.payload
       );
-      if(state.cartItems[index].count === 1) return;
+      if (state.cartItems[index].count === 1) return;
 
       state.cartItems[index].count -= 1;
     },
 
     removeFromCart: (state, action) => {
-      state.cartItems = state.cartItems.filter((item) => item.id !== action.payload)
+      state.cartItems = state.cartItems.filter(
+        (item) => item.id !== action.payload
+      );
     },
 
     clearCart: (state) => {
       state.cartItems = [];
-    }
+    },
   },
 });
 
-export const { addToCart, increaseCount, decreaseCount, removeFromCart, clearCart} =
-  cartItemsSlice.actions;
+export const {
+  addToCart,
+  increaseCount,
+  decreaseCount,
+  removeFromCart,
+  clearCart,
+} = cartItemsSlice.actions;
 export default cartItemsSlice.reducer;

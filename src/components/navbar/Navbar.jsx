@@ -1,10 +1,12 @@
-import styles from "./navbar.module.css";
-import pizzaIcon from "../../assets/icons/header-pizza-icon.svg";
-import likedCountIcon from "../../assets/icons/header-liked-count-icon.svg";
-import cartCountIcon from "../../assets/icons/header-cart-count-icon.svg";
-import { useSelector } from "react-redux";
+import {
+  styles,
+  pizzaIcon,
+  useSelector,
+  cartCountIcon,
+  likedCountIcon,
+} from "./index";
 
-const Navbar = ({ setCartIsOpen, cartBtnHandler }) => {
+const Navbar = ({ cartBtnHandler }) => {
   const cartItems = useSelector((state) => state.cartItem.cartItems);
 
   return (
@@ -24,7 +26,6 @@ const Navbar = ({ setCartIsOpen, cartBtnHandler }) => {
               <img src={likedCountIcon} alt="" />
               <p>10</p>
             </div>
-
             <p className={styles.desc}>Liked</p>
           </button>
 

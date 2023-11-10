@@ -1,0 +1,41 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  height: 40px;
+  margin: auto;
+}
+
+.header h2,
+.header .clear_btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #444;
+}
+
+.header h2 {
+  font-size: 27px;
+}
+
+.header .clear_btn {
+  font-size: 22px;
+}
+
+.header button {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  font-size: 30px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.header img {
+  width: 25px;
+}
+
+.clear_btn img {
+  width: 19px !important;
+}

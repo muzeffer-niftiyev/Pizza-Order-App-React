@@ -1,5 +1,5 @@
-import casear from "../assets/img/salads/casear.png";
 import greek from "../assets/img/salads/greek.png";
+import casear from "../assets/img/salads/casear.png";
 import caprese from "../assets/img/salads/caprese.png";
 
 const saladsData = [

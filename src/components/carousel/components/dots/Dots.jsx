@@ -1,4 +1,4 @@
-import styles from './dots.module.css';
+import { styles } from "./index";
 
 const Dots = ({ goToSlide, curSlide, slideData }) => {
   return (
@@ -14,6 +14,6 @@ const Dots = ({ goToSlide, curSlide, slideData }) => {
       ))}
     </div>
   );
-}
+};
 
 export default Dots;

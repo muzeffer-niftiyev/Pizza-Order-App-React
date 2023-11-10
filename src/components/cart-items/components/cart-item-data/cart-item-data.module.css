@@ -1,0 +1,65 @@
+.item {
+  width: 100%;
+  border-radius: 9px;
+  padding: 10px 15px;
+  background-color: #2e3033;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  color: #ecf0f1;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.item:hover {
+  box-shadow: 3px 3px 7px #222;
+}
+
+.item img {
+  width: 80px;
+}
+
+.amount {
+  margin-left: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  color: #ecf0f1;
+}
+
+.amount button {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  font-size: 32px;
+  color: #ecf0f1;
+  cursor: pointer;
+  transform: translateY(-5px);
+}
+
+.datas div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.amount span {
+  background-color: #282a2c;
+  padding: 5px 10px;
+}
+
+.delete_item {
+  background-color: rgba(201, 23, 23);
+  border: none;
+  outline: none;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete_item img {
+  width: 23px;
+}

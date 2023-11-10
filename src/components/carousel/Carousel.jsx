@@ -1,13 +1,13 @@
-import Dots from "./components/dots/dots";
-import Slides from "./components/slides/slides";
-import slideData from "../../data/slide-data";
-import styles from "./carousel.module.css";
 import { useEffect } from "react";
-import {
-  goToNextSlide,
-  goToSlide,
-} from "../../features/carousel-slice/carousel-slice";
 import { useDispatch, useSelector } from "react-redux";
+import {
+  Dots,
+  Slides,
+  styles,
+  goToSlide,
+  slideData,
+  goToNextSlide,
+} from "./index";
 
 const Carousel = () => {
   const curSlide = useSelector((state) => state.carousel.curSlide);

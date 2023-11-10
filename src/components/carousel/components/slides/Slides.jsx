@@ -1,6 +1,6 @@
-import styles from './slides.module.css';
+import { styles } from "./index";
 
-const Slides = ({curSlide, slideData}) => {
+const Slides = ({ curSlide, slideData }) => {
   return (
     <div className={styles.slides}>
       {slideData.map((slide, index) => (
@@ -26,6 +26,6 @@ const Slides = ({curSlide, slideData}) => {
       ))}
     </div>
   );
-}
+};
 
 export default Slides;
