@@ -1,21 +1,32 @@
+import { useState } from "react";
 import styles from "./app.module.css";
+import Menu from "./components/menu/menu";
 import Navbar from "./components/navbar/navbar";
 import Carousel from "./components/carousel/carousel";
-import Menu from "./components/menu/menu";
 import CartItems from "./components/cart-items/cart-items";
 import LikedItems from "./components/liked-items/liked-items";
-import { useState } from "react";
+import IncreaseBalanceModal from "./components/modals/increase-balance/increase-balance-modal";
 
 const App = () => {
-  const [cartIsOpen, setCartIsOpen] = useState(false);
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  const [isIncreaseBalanceModalOpen, setIsIncreaseBalanceModalOpen] = useState(false);
+
   const cartBtnHandler = () => {
-    setCartIsOpen((prev) => !prev);
+    setIsCartOpen((prev) => !prev);
   };
 
   return (
     <div className={styles.container}>
-      <Navbar cartBtnHandler={cartBtnHandler} />
-      <CartItems cartIsOpen={cartIsOpen} backBtnHandler={cartBtnHandler} />
+      {isIncreaseBalanceModalOpen && (
+        <IncreaseBalanceModal
+          setIsIncreaseBalanceModalOpen={setIsIncreaseBalanceModalOpen}
+        />
+      )}
+      <Navbar
+        cartBtnHandler={cartBtnHandler}
+        setIsIncreaseBalanceModalOpen={setIsIncreaseBalanceModalOpen}
+      />
+      <CartItems isCartOpen={isCartOpen} backBtnHandler={cartBtnHandler} />
       <LikedItems />
       <Carousel />
       <Menu />

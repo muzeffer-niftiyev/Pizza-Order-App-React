@@ -1,13 +1,17 @@
 import {
   styles,
+  useState,
   pizzaIcon,
   useSelector,
+  arrowDownIcon,
   cartCountIcon,
   likedCountIcon,
 } from "./index";
 
-const Navbar = ({ cartBtnHandler }) => {
+const Navbar = ({ cartBtnHandler, setIsIncreaseBalanceModalOpen }) => {
   const cartItems = useSelector((state) => state.cartItem.cartItems);
+  const balance = localStorage.getItem('balance');
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   return (
     <nav>
@@ -35,6 +39,31 @@ const Navbar = ({ cartBtnHandler }) => {
               <p>{cartItems.length}</p>
             </div>
             <p className={styles.desc}>Cart</p>
+          </button>
+
+          <button
+            className={`${styles.balance} ${
+              isDropdownOpen ? styles.dropdownIsOpen : ""
+            }`}
+            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+          >
+            <div>
+              <span>Balance</span>
+              <p>${balance}</p>
+              <img src={arrowDownIcon} alt="" />
+            </div>
+
+            <div className={styles.dropdown}>
+              <button
+                className={styles.increase}
+                onClick={() => setIsIncreaseBalanceModalOpen(true)}
+              >
+                <p>Increase Balance</p>
+              </button>
+              <button className={styles.history}>
+                <p>History</p>
+              </button>
+            </div>
           </button>
         </div>
       </div>

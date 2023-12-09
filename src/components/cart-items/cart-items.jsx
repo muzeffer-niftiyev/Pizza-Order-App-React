@@ -9,7 +9,7 @@ import {
   sadEmojiIcon,
 } from "./index";
 
-const CartItems = ({ cartIsOpen, backBtnHandler }) => {
+const CartItems = ({ isCartOpen, backBtnHandler }) => {
   const cartItems = useSelector((state) => state.cartItem.cartItems);
   const [amount, setAmount] = useState(0);
 
@@ -22,7 +22,7 @@ const CartItems = ({ cartIsOpen, backBtnHandler }) => {
   }, [cartItems]);
 
   return (
-    <div className={cartIsOpen ? `${styles.cont} ${styles.show}` : styles.cont}>
+    <div className={isCartOpen ? `${styles.cont} ${styles.show}` : styles.cont}>
       <CartNavbar backBtnHandler={backBtnHandler} />
 
       {!cartItems.length ? (

@@ -1,0 +1,64 @@
+.box{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1111111111111;
+    backdrop-filter: blur(4px);
+}
+
+.content{
+    width: 400px;
+    position: relative;
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 6px;
+}
+
+.content h3{
+    width: 80%;
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.content input{
+    width: 100%;
+    outline: none;
+    padding: 5px;
+    height: 40px;
+    margin-top: 8px;
+}
+
+.content label{
+    color: #333;
+}
+
+.content .submit_btn{
+    margin-top: 30px;
+    font-size: 17px;
+    float: right;
+    padding: 10px 20px;
+    border-radius: 3px;
+    color: #eee;
+    cursor: pointer;
+    font-weight: bold;
+    border: 2px solid rgb(15, 141, 57);
+    background-color: rgb(19, 190, 76)
+}
+
+.content .close_modal{
+    position: absolute;
+    right: 15px;
+    top: 0px;
+    background-color: inherit;
+    border: none;
+    outline: none;
+    color: rgb(221, 48, 48);
+    cursor: pointer;
+    font-size: 40px;
+    font-weight: bold;
+}

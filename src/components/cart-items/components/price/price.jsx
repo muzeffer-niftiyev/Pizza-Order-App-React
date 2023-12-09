@@ -7,20 +7,17 @@ const Price = ({ amount }) => {
     <div className={styles.price}>
       <div className={styles.price_cont}>
         <div>
-          <h3>Sub Total</h3>
-          <span>-</span>
+          <h3>Sub-Total</h3>
           <span>$ {amount}</span>
         </div>
         <div>
           <h3>Delivery</h3>
-          <span>-</span>
           <span>$ {deliveryPrice}</span>
         </div>
         <div className={styles.line}></div>
 
         <div>
           <h2>TOTAL</h2>
-          <span>-</span>
           <span>$ {amount + deliveryPrice}</span>
         </div>
         <button>Order Now</button>

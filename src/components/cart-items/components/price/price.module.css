@@ -20,11 +20,12 @@
   justify-content: space-between;
   font-weight: bold;
   color: #c9d1dd;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .price div h2 {
-  font-size: 23px;
+  font-size: 21px;
+  letter-spacing: 2px;
 }
 
 .line {
@@ -33,6 +34,10 @@
   background-color: #c9d1dd;
   border: none;
   border-radius: 8px;
+}
+
+.price h3{
+  font-weight: lighter;
 }
 
 .price button {
@@ -47,6 +52,7 @@
   padding: 10px 20px;
   transition: all 0.5s;
   margin-top: 25px;
+  width: 80%;
 }
 
 .price button:hover {
@@ -61,3 +67,4 @@
     transform: translateY(0px);
   }
 }
+
