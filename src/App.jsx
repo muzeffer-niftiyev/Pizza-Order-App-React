@@ -9,7 +9,8 @@ import IncreaseBalanceModal from "./components/modals/increase-balance/increase-
 
 const App = () => {
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const [isIncreaseBalanceModalOpen, setIsIncreaseBalanceModalOpen] = useState(false);
+  const [isIncreaseBalanceModalOpen, setIsIncreaseBalanceModalOpen] =
+    useState(false);
 
   const cartBtnHandler = () => {
     setIsCartOpen((prev) => !prev);
@@ -26,7 +27,7 @@ const App = () => {
         cartBtnHandler={cartBtnHandler}
         setIsIncreaseBalanceModalOpen={setIsIncreaseBalanceModalOpen}
       />
-      <CartItems isCartOpen={isCartOpen} backBtnHandler={cartBtnHandler} />
+      <CartItems isCartOpen={isCartOpen} setIsCartOpen={setIsCartOpen} backBtnHandler={cartBtnHandler} />
       <LikedItems />
       <Carousel />
       <Menu />

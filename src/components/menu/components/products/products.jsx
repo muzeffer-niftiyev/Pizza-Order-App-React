@@ -1,5 +1,6 @@
-import Product from "../product/product";
-import { styles, addToCart, useState, useDispatch } from "./index";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { styles, addToCart, Product } from "./index";
 
 const formatIngredients = (product) => {
   if (!product.details) return;

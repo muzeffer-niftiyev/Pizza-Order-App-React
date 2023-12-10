@@ -1,16 +1,16 @@
+import { memo, useState } from "react";
+import { useSelector } from "react-redux";
 import {
   styles,
-  useState,
   pizzaIcon,
-  useSelector,
   arrowDownIcon,
   cartCountIcon,
   likedCountIcon,
 } from "./index";
 
-const Navbar = ({ cartBtnHandler, setIsIncreaseBalanceModalOpen }) => {
+const Navbar = memo(({ cartBtnHandler, setIsIncreaseBalanceModalOpen }) => {
   const cartItems = useSelector((state) => state.cartItem.cartItems);
-  const balance = localStorage.getItem('balance');
+  const balance = localStorage.getItem("balance");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   return (
@@ -69,6 +69,6 @@ const Navbar = ({ cartBtnHandler, setIsIncreaseBalanceModalOpen }) => {
       </div>
     </nav>
   );
-};
+});
 
 export default Navbar;

@@ -11,8 +11,13 @@ export const balanceSlice = createSlice({
       state.balance = newBalance;
       localStorage.setItem("balance", newBalance.toString());
     },
+    decreaseBalance: (state, action) => {
+      const newBalance = Number(state.balance) - Number(action.payload);
+      state.balance = newBalance;
+      localStorage.setItem("balance", newBalance.toString());
+    },
   },
 });
 
-export const { increaseBalance } = balanceSlice.actions;
+export const { increaseBalance, decreaseBalance } = balanceSlice.actions;
 export default balanceSlice.reducer;

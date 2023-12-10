@@ -9,13 +9,13 @@ import {
   sadEmojiIcon,
 } from "./index";
 
-const CartItems = ({ isCartOpen, backBtnHandler }) => {
+const CartItems = ({ isCartOpen, setIsCartOpen, backBtnHandler }) => {
   const cartItems = useSelector((state) => state.cartItem.cartItems);
   const [amount, setAmount] = useState(0);
 
   useEffect(() => {
     const totalAmount = cartItems?.reduce(
-      (acc, item) => acc + +item.price * item.count,
+      (acc, item) => acc + Number(item.price) * item.count,
       0
     );
     setAmount(totalAmount);
@@ -36,7 +36,7 @@ const CartItems = ({ isCartOpen, backBtnHandler }) => {
               <CartItemData product={product} />
             ))}
           </div>
-          <Price amount={amount} />
+          <Price amount={amount} setIsCartOpen={setIsCartOpen}/>
         </div>
       )}
     </div>

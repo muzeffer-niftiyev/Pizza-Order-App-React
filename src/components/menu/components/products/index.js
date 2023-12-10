@@ -1,6 +1,5 @@
-import { useState } from "react";
-import { useDispatch } from "react-redux";
+import Product from "../product/product";
 import styles from "./products.module.css";
 import { addToCart } from "../../../../features/cart-items-slice/cart-items-slice";
 
-export { styles, addToCart, useState, useDispatch };
+export { styles, addToCart, Product };

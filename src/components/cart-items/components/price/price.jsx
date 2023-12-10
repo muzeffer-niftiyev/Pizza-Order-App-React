@@ -1,7 +1,15 @@
-import { styles } from "./index";
+import { styles, decreaseBalance, clearCart } from "./index";
+import { useDispatch } from "react-redux";
 
-const Price = ({ amount }) => {
-  const deliveryPrice = 5;
+const Price = ({ amount , setIsCartOpen}) => {
+  const deliveryPrice = 5; // helelik sabit value'di user seciminden asili olaraq hesablanacaq qiymet
+  const dispatch = useDispatch();
+
+  const orderBtnHandler = () => {
+    dispatch(decreaseBalance(amount + deliveryPrice));
+    dispatch(clearCart());
+    setIsCartOpen(false);
+  }
 
   return (
     <div className={styles.price}>
@@ -20,7 +28,7 @@ const Price = ({ amount }) => {
           <h2>TOTAL</h2>
           <span>$ {amount + deliveryPrice}</span>
         </div>
-        <button>Order Now</button>
+        <button onClick={orderBtnHandler}>Order Now</button>
       </div>
     </div>
   );
