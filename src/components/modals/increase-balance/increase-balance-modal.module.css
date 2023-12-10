@@ -8,10 +8,12 @@
     align-items: center;
     z-index: 1111111111111;
     backdrop-filter: blur(4px);
+    transition: all .5s;
 }
 
 .content{
     width: 400px;
+    height: 300px;
     position: relative;
     background-color: #fff;
     padding: 20px 30px;
@@ -38,9 +40,11 @@
 }
 
 .content .submit_btn{
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
     margin-top: 30px;
     font-size: 17px;
-    float: right;
     padding: 10px 20px;
     border-radius: 3px;
     color: #eee;
@@ -61,4 +65,11 @@
     cursor: pointer;
     font-size: 40px;
     font-weight: bold;
+}
+
+
+.error{
+    margin-top: 10px;
+    color: rgb(240, 82, 82);
+    font-weight: bolder;
 }

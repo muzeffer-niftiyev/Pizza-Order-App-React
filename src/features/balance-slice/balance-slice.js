@@ -1,17 +1,18 @@
-import { createSlice } from "@reduxjs/toolkit"
+import { createSlice } from "@reduxjs/toolkit";
 
 export const balanceSlice = createSlice({
-    name: 'balance', 
-    initialState: {
-        balance: parseFloat(localStorage.getItem('balance')) || 0,
+  name: "balance",
+  initialState: {
+    balance: parseFloat(localStorage.getItem("balance")) || 0,
+  },
+  reducers: {
+    increaseBalance: (state, action) => {
+      const newBalance = Number(state.balance) + Number(action.payload);
+      state.balance = newBalance;
+      localStorage.setItem("balance", newBalance.toString());
     },
-    reducers: {
-        increaseBalance: (state, action) => {
-            const newBalance = state.balance + action.payload;
-            localStorage.setItem('balance', newBalance);
-        }
-    }
-})
+  },
+});
 
-export const {increaseBalance} = balanceSlice.actions;
+export const { increaseBalance } = balanceSlice.actions;
 export default balanceSlice.reducer;

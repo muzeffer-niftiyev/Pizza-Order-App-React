@@ -6,26 +6,54 @@ import { useState } from "react";
 const IncreaseBalanceModal = ({ setIsIncreaseBalanceModalOpen }) => {
   const dispatch = useDispatch();
   const [amount, setAmount] = useState(0);
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const checkIsAmountValid = () => {
+    return !(amount <= 0 || amount > 500 || isNaN(amount));
+  };
 
   const submitBtnHandler = () => {
-    dispatch(increaseBalance(amount))
-    setIsIncreaseBalanceModalOpen(false);
+    if (checkIsAmountValid()) {
+      setErrorMessage("");
+      dispatch(increaseBalance(amount));
+      setIsIncreaseBalanceModalOpen(false);
+    } else {
+      setErrorMessage(
+        "Invalid amount! Please enter an amount between 1 and 500."
+      );
+    }
   };
 
   const getInputData = (e) => {
-  setAmount(parseInt(e.target.value, 10));
-  }
+    setAmount(parseInt(e.target.value, 10));
+
+    if (errorMessage && e.target.value.trim() !== "") {
+      setErrorMessage("");
+    }
+  };
+
+  const closeModalHandler = () => setIsIncreaseBalanceModalOpen(false);
   return (
     <div className={styles.box}>
       <div className={styles.content}>
-        <button className={styles.close_modal}>&times;</button>
+        <button className={styles.close_modal} onClick={closeModalHandler}>
+          &times;
+        </button>
         <h3>Increase balance</h3>
         <div>
           <label>Amount you want to add</label>
-          <input type="number" min={1} max={500} step={10} onChange={getInputData}/>
+          <input
+            type="number"
+            min={1}
+            max={500}
+            step={10}
+            onChange={getInputData}
+          />
         </div>
-
-        <button onClick={submitBtnHandler} className={styles.submit_btn}>Submit</button>
+        {errorMessage && <p className={styles.error}>{errorMessage}</p>}
+        <button onClick={submitBtnHandler} className={styles.submit_btn}>
+          Submit
+        </button>
       </div>
     </div>
   );
