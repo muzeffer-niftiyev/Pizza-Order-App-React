@@ -6,7 +6,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 1111111111111;
+    z-index: 111111111111111;
     backdrop-filter: blur(4px);
     transition: all .5s;
 }
