@@ -9,6 +9,7 @@ import {
 
 const CartNavbar = ({ backBtnHandler }) => {
   const dispatch = useDispatch();
+  
   const clearCartHandler = () => {
     dispatch(clearCart());
   };

@@ -1,7 +1,10 @@
-import { styles, decreaseBalance, clearCart } from "./index";
-import { useDispatch } from "react-redux";
+import { styles, decreaseBalance, clearCart, addOrderToHistory } from "./index";
+import { useDispatch, useSelector } from "react-redux";
+import { closeCart } from "../../../../features/cart-items-slice/cart-items-slice";
 
-const Price = ({ amount, setIsCartOpen, setOrderStatus }) => {
+const Price = ({ amount, setOrderStatus }) => {
+  const orderedItems = useSelector((state) => state.cartItem.cartItems);
+  //const orderHistory = useSelector((state) => state.orderHistory.orderHistory);
   const deliveryPrice = 5; // helelik sabit value'di user seciminden asili olaraq hesablanacaq qiymet
   const dispatch = useDispatch();
   const balance = localStorage.getItem("balance");
@@ -9,12 +12,13 @@ const Price = ({ amount, setIsCartOpen, setOrderStatus }) => {
   const orderBtnHandler = () => {
     if (balance < amount + deliveryPrice) {
       setOrderStatus("error");
-      setIsCartOpen(false);
+      dispatch(closeCart())
     } else {
       dispatch(decreaseBalance(amount + deliveryPrice));
       dispatch(clearCart());
-      setIsCartOpen(false);
+      dispatch(closeCart());
       setOrderStatus("success");
+      dispatch(addOrderToHistory(orderedItems));
     }
   };
 

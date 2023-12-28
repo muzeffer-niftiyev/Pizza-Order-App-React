@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { styles, increaseBalance } from "./index";
+import { closeIncreaseBalanceModal } from "../../../features/balance-slice/balance-slice";
 
-const IncreaseBalanceModal = ({ setIsIncreaseBalanceModalOpen }) => {
+const IncreaseBalanceModal = () => {
   const dispatch = useDispatch();
   const [amount, setAmount] = useState(0);
   const [errorMessage, setErrorMessage] = useState("");
@@ -15,7 +16,7 @@ const isAmountValid = !(amount <= 0 || amount > 500 || isNaN(amount));
     if (isAmountValid) {
       setErrorMessage("");
       dispatch(increaseBalance(amount));
-      setIsIncreaseBalanceModalOpen(false);
+      dispatch(closeIncreaseBalanceModal());
     } else {
       setErrorMessage(
         "Invalid amount! Please enter an amount between 1 and 500."
@@ -31,7 +32,7 @@ const isAmountValid = !(amount <= 0 || amount > 500 || isNaN(amount));
     }
   };
 
-  const closeModalHandler = () => setIsIncreaseBalanceModalOpen(false);
+  const closeModalHandler = () => dispatch(closeIncreaseBalanceModal());
   return (
     <div className={styles.box}>
       <div className={styles.content}>

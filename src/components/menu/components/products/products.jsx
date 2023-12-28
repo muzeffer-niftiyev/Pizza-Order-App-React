@@ -9,7 +9,8 @@ const formatIngredients = (product) => {
     ? `${details.slice(0, 3).join(",")}...`
     : details.join(",");
 };
-
+///////////////////////////////////// read more kimi bir buton elave ele basanda butun ingredientler gorunsun 
+///////////////////////////////////// tezden basanda yene qisa formasi
 const Products = ({ data }) => {
   const dispatch = useDispatch();
   const [selectedOption, setSelectedOption] = useState(data.map(() => 0));
@@ -39,6 +40,7 @@ const Products = ({ data }) => {
       {data.map((product, index) => (
         <Product
           index={index}
+          key={index}
           product={product}
           selectedOption={selectedOption}
           formatIngredients={formatIngredients}

@@ -1,27 +1,27 @@
 import { Route, Routes, Products, datas } from "./index";
 
-const Router = ({ key }) => {
+const MenuRouter = () => {
   return (
     <Routes>
       <Route
         index
         path="/"
-        element={<Products key={key} data={datas.pizzasData} />}
+        element={<Products key='pizza' data={datas.pizzasData} />}
       />
       <Route
         path="/drinks"
-        element={<Products key={key} data={datas.drinksData} />}
+        element={<Products key='drinks' data={datas.drinksData} />}
       />
       <Route
         path="/salad"
-        element={<Products key={key} data={datas.saladsData} />}
+        element={<Products key='salad' data={datas.saladsData} />}
       />
       <Route
         path="/sauce"
-        element={<Products key={key} data={datas.saucesData} />}
+        element={<Products key='sauce' data={datas.saucesData} />}
       />
     </Routes>
   );
 };
 
-export default Router;
+export default MenuRouter;

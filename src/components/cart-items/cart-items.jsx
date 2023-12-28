@@ -9,14 +9,22 @@ import {
   CartItemData,
   sadEmojiIcon,
 } from "./index";
+import { useDispatch } from "react-redux";
+import { closeCart } from "../../features/cart-items-slice/cart-items-slice";
 
-const CartItems = ({ isCartOpen, setIsCartOpen, backBtnHandler }) => {
+const CartItems = () => {
   const cartItems = useSelector((state) => state.cartItem.cartItems);
+  const isCartOpen = useSelector((state) => state.cartItem.isCartOpen);
+  const dispatch = useDispatch();
   const [amount, setAmount] = useState(0);
   const [orderStatus, setOrderStatus] = useState('');
 
   const okBtnHandler = () => {
     setOrderStatus('');
+  }
+
+  const backBtnHandler = () => {
+    dispatch(closeCart());
   }
 
   useEffect(() => {
@@ -34,7 +42,7 @@ const CartItems = ({ isCartOpen, setIsCartOpen, backBtnHandler }) => {
         className={isCartOpen ? `${styles.cont} ${styles.show}` : styles.cont}
       >
         <CartNavbar backBtnHandler={backBtnHandler} />
-
+        
         {!cartItems.length ? (
           <p className={styles.no_item_message}>
             Cart is empty! <img src={sadEmojiIcon} alt="" />
@@ -46,11 +54,7 @@ const CartItems = ({ isCartOpen, setIsCartOpen, backBtnHandler }) => {
                 <CartItemData product={product} />
               ))}
             </div>
-            <Price
-              amount={amount}
-              setIsCartOpen={setIsCartOpen}
-              setOrderStatus={setOrderStatus}
-            />
+            <Price amount={amount} setOrderStatus={setOrderStatus} />
           </div>
         )}
       </div>

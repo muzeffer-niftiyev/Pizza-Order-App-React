@@ -1,8 +1,6 @@
-import { styles, useLocation, Links, Router } from "./index";
+import { styles, Links, MenuRouter } from "./index";
 
 const Menu = () => {
-  const location = useLocation();
-  const key = location.pathname;
 
   return (
     <div className={styles.menu_container}>
@@ -10,7 +8,7 @@ const Menu = () => {
         <h3>Menu</h3>
       </div>
       <Links />
-      <Router key={key} />
+      <MenuRouter />
     </div>
   );
 };

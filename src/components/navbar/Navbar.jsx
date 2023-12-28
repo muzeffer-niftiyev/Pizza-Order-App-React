@@ -1,5 +1,8 @@
 import { memo, useState } from "react";
+import { toggleCart } from "../../features/cart-items-slice/cart-items-slice";
 import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { openIncreaseBalanceModal } from "../../features/balance-slice/balance-slice";
 import {
   styles,
   pizzaIcon,
@@ -8,10 +11,19 @@ import {
   likedCountIcon,
 } from "./index";
 
-const Navbar = memo(({ cartBtnHandler, setIsIncreaseBalanceModalOpen }) => {
+const Navbar = memo(() => {
+  const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cartItem.cartItems);
   const balance = localStorage.getItem("balance");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const cartBtnHandler = () => {
+     dispatch(toggleCart())
+  }
+
+  const openModalHandler = () => {
+    dispatch(openIncreaseBalanceModal());
+  }
 
   return (
     <nav>
@@ -32,8 +44,7 @@ const Navbar = memo(({ cartBtnHandler, setIsIncreaseBalanceModalOpen }) => {
             </div>
             <p className={styles.desc}>Liked</p>
           </button>
-
-          <button onClick={() => cartBtnHandler()}>
+          <button onClick={cartBtnHandler}>
             <div className={styles.icon}>
               <img src={cartCountIcon} alt="" />
               <p>{cartItems.length}</p>
@@ -54,15 +65,15 @@ const Navbar = memo(({ cartBtnHandler, setIsIncreaseBalanceModalOpen }) => {
             </div>
 
             <div className={styles.dropdown}>
-              <button
+              <div
                 className={styles.increase}
-                onClick={() => setIsIncreaseBalanceModalOpen(true)}
+                onClick={openModalHandler}
               >
                 <p>Increase Balance</p>
-              </button>
-              <button className={styles.history}>
-                <p>History</p>
-              </button>
+              </div>
+              <div className={styles.history}>
+                <p>Order History</p>
+              </div>
             </div>
           </button>
         </div>
