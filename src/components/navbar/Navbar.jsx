@@ -1,15 +1,17 @@
-import { memo, useState } from "react";
-import { toggleCart } from "../../features/cart-items-slice/cart-items-slice";
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
-import { openIncreaseBalanceModal } from "../../features/balance-slice/balance-slice";
 import {
+  memo,
   styles,
+  useState,
   pizzaIcon,
+  toggleCart,
+  useDispatch,
+  useSelector,
   arrowDownIcon,
   cartCountIcon,
   likedCountIcon,
+  openIncreaseBalanceModal,
 } from "./index";
+import { toggleHistory } from "../../features/order-history-slice/order-history-slice";
 
 const Navbar = memo(() => {
   const dispatch = useDispatch();
@@ -18,12 +20,16 @@ const Navbar = memo(() => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const cartBtnHandler = () => {
-     dispatch(toggleCart())
-  }
+    dispatch(toggleCart());
+  };
 
   const openModalHandler = () => {
     dispatch(openIncreaseBalanceModal());
-  }
+  };
+
+  const openHistoryHandler = () => {
+    dispatch(toggleHistory());
+  };
 
   return (
     <nav>
@@ -65,13 +71,10 @@ const Navbar = memo(() => {
             </div>
 
             <div className={styles.dropdown}>
-              <div
-                className={styles.increase}
-                onClick={openModalHandler}
-              >
+              <div className={styles.increase} onClick={openModalHandler}>
                 <p>Increase Balance</p>
               </div>
-              <div className={styles.history}>
+              <div className={styles.history} onClick={openHistoryHandler}>
                 <p>Order History</p>
               </div>
             </div>

@@ -2,16 +2,21 @@ import {
   styles,
   cartIcon,
   clearCart,
+  closeCart,
   useDispatch,
   leftArrowIcon,
   clearPageIcon,
 } from "./index";
 
-const CartNavbar = ({ backBtnHandler }) => {
+const CartNavbar = () => {
   const dispatch = useDispatch();
   
   const clearCartHandler = () => {
     dispatch(clearCart());
+  };
+
+  const backBtnHandler = () => {
+    dispatch(closeCart());
   };
 
   return (

@@ -1,6 +1,4 @@
-import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { styles, addToCart, Product } from "./index";
+import { styles, addToCart, Product, useDispatch, useState } from "./index";
 
 const formatIngredients = (product) => {
   if (!product.details) return;
@@ -9,7 +7,7 @@ const formatIngredients = (product) => {
     ? `${details.slice(0, 3).join(",")}...`
     : details.join(",");
 };
-///////////////////////////////////// read more kimi bir buton elave ele basanda butun ingredientler gorunsun 
+///////////////////////////////////// read more kimi bir buton elave ele basanda butun ingredientler gorunsun
 ///////////////////////////////////// tezden basanda yene qisa formasi
 const Products = ({ data }) => {
   const dispatch = useDispatch();

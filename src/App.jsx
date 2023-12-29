@@ -1,21 +1,24 @@
 import styles from "./app.module.css";
+import { useSelector } from "react-redux";
 import Menu from "./components/menu/menu";
 import Navbar from "./components/navbar/navbar";
 import Carousel from "./components/carousel/carousel";
 import CartItems from "./components/cart-items/cart-items";
 import LikedItems from "./components/liked-items/liked-items";
+import OrderHistory from "./components/order-history/order-history";
 import IncreaseBalanceModal from "./components/modals/increase-balance/increase-balance-modal";
-import { useSelector } from "react-redux";
-/// butun proyektdeki import exportlari seliqeye salmaq lazmdi
 
 const App = () => {
-  const isIncreaseBalanceModalOpen = useSelector((state) => state.balance.isIncreaseBalanceModalOpen)
+  const isIncreaseBalanceModalOpen = useSelector(
+    (state) => state.balance.isIncreaseBalanceModalOpen
+  );
 
   return (
     <div className={styles.container}>
       {isIncreaseBalanceModalOpen && <IncreaseBalanceModal />}
-      <Navbar/>
+      <Navbar />
       <CartItems />
+      <OrderHistory />
       <LikedItems />
       <Carousel />
       <Menu />

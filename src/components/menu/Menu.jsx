@@ -1,7 +1,6 @@
 import { styles, Links, MenuRouter } from "./index";
 
 const Menu = () => {
-
   return (
     <div className={styles.menu_container}>
       <div className={styles.menu_header}>

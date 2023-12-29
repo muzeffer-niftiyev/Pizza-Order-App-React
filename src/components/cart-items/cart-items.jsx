@@ -1,31 +1,24 @@
-import InfoModal from "../modals/info-modal/info-modal";
 import {
   Price,
   styles,
   useState,
   useEffect,
+  InfoModal,
   CartNavbar,
   useSelector,
   CartItemData,
   sadEmojiIcon,
 } from "./index";
-import { useDispatch } from "react-redux";
-import { closeCart } from "../../features/cart-items-slice/cart-items-slice";
 
 const CartItems = () => {
   const cartItems = useSelector((state) => state.cartItem.cartItems);
   const isCartOpen = useSelector((state) => state.cartItem.isCartOpen);
-  const dispatch = useDispatch();
   const [amount, setAmount] = useState(0);
-  const [orderStatus, setOrderStatus] = useState('');
+  const [orderStatus, setOrderStatus] = useState("");
 
   const okBtnHandler = () => {
-    setOrderStatus('');
-  }
-
-  const backBtnHandler = () => {
-    dispatch(closeCart());
-  }
+    setOrderStatus("");
+  };
 
   useEffect(() => {
     const totalAmount = cartItems?.reduce(
@@ -41,8 +34,8 @@ const CartItems = () => {
       <div
         className={isCartOpen ? `${styles.cont} ${styles.show}` : styles.cont}
       >
-        <CartNavbar backBtnHandler={backBtnHandler} />
-        
+        <CartNavbar />
+
         {!cartItems.length ? (
           <p className={styles.no_item_message}>
             Cart is empty! <img src={sadEmojiIcon} alt="" />
@@ -51,7 +44,7 @@ const CartItems = () => {
           <div className={styles.content}>
             <div className={styles.cart_items}>
               {cartItems.map((product) => (
-                <CartItemData product={product} />
+                <CartItemData product={product} key={product.id} />
               ))}
             </div>
             <Price amount={amount} setOrderStatus={setOrderStatus} />

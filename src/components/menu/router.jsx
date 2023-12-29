@@ -6,19 +6,19 @@ const MenuRouter = () => {
       <Route
         index
         path="/"
-        element={<Products key='pizza' data={datas.pizzasData} />}
+        element={<Products key="pizza" data={datas.pizzasData} />}
       />
       <Route
         path="/drinks"
-        element={<Products key='drinks' data={datas.drinksData} />}
+        element={<Products key="drinks" data={datas.drinksData} />}
       />
       <Route
         path="/salad"
-        element={<Products key='salad' data={datas.saladsData} />}
+        element={<Products key="salad" data={datas.saladsData} />}
       />
       <Route
         path="/sauce"
-        element={<Products key='sauce' data={datas.saucesData} />}
+        element={<Products key="sauce" data={datas.saucesData} />}
       />
     </Routes>
   );

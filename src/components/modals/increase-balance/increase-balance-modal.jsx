@@ -1,16 +1,17 @@
-import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { styles, increaseBalance } from "./index";
-import { closeIncreaseBalanceModal } from "../../../features/balance-slice/balance-slice";
+import {
+  styles,
+  useState,
+  useDispatch,
+  increaseBalance,
+  closeIncreaseBalanceModal,
+} from "./index";
 
 const IncreaseBalanceModal = () => {
   const dispatch = useDispatch();
   const [amount, setAmount] = useState(0);
   const [errorMessage, setErrorMessage] = useState("");
 
-  
-const isAmountValid = !(amount <= 0 || amount > 500 || isNaN(amount));
- 
+  const isAmountValid = !(amount <= 0 || amount > 500 || isNaN(amount));
 
   const submitBtnHandler = () => {
     if (isAmountValid) {
