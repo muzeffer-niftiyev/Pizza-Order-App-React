@@ -13,7 +13,8 @@ export const orderHistorySlice = createSlice({
       localStorage.setItem("orderHistory", JSON.stringify(updatedHistory));
     },
 
-    clearHistory: () => {
+    clearHistory: (state) => {
+      state.orderHistory = [];
       localStorage.setItem("orderHistory", JSON.stringify([]));
     },
 

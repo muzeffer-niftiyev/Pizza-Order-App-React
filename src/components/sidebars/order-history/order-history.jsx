@@ -1,12 +1,17 @@
-import { styles, orderIcon, rightArrowIcon, HistoryNavbar } from "./index";
+import { styles, orderIcon, rightArrowIcon } from "./index";
 import { useSelector } from "react-redux/es/hooks/useSelector";
+import { SidebarNavbar } from "../cart-items";
+import { closeHistory } from "../../../features/order-history-slice/order-history-slice";
+import { clearHistory } from "../../../features/order-history-slice/order-history-slice";
+
 
 const OrderHistory = () => {
   const isHistoryOpen = useSelector(
     (state) => state.orderHistory.isHistoryOpen
   );
-  const history = JSON.parse(localStorage.getItem("orderHistory"));
-  const formatPrice = (price) => price?.toFixed(2).toString()?.replace(".", ",");
+  const history = useSelector((state) => state.orderHistory.orderHistory);
+  const formatPrice = (price) =>
+    price?.toFixed(2).toString()?.replace(".", ",");
 
   return (
     <div
@@ -14,7 +19,7 @@ const OrderHistory = () => {
         isHistoryOpen ? `${styles.container} ${styles.show}` : styles.container
       }
     >
-      <HistoryNavbar />
+      <SidebarNavbar clearData={clearHistory} closeSidebar={closeHistory} title={'History'}/>
 
       {!history?.length ? (
         <p className={styles.empty_message}>

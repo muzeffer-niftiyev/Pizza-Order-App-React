@@ -35,13 +35,8 @@ const Price = ({ amount, setOrderStatus }) => {
       dispatch(clearCart());
       dispatch(closeCart());
       setOrderStatus("success");
-
-      // dispatch(
-      //   addOrderToHistory([
-      //     ...orderedItems,
-      //     { date: getOrderDate(), totalPrice: amount + deliveryPrice },
-      //   ])
-      // );
+      
+      if(!orderedItems) return;
       dispatch(
         addOrderToHistory({
           date: getOrderDate(),

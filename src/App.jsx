@@ -3,9 +3,9 @@ import { useSelector } from "react-redux";
 import Menu from "./components/menu/menu";
 import Navbar from "./components/navbar/navbar";
 import Carousel from "./components/carousel/carousel";
-import CartItems from "./components/cart-items/cart-items";
-import LikedItems from "./components/liked-items/liked-items";
-import OrderHistory from "./components/order-history/order-history";
+import CartItems from "./components/sidebars/cart-items/cart-items";
+import LikedItems from "./components/sidebars/liked-items/liked-items";
+import OrderHistory from "./components/sidebars/order-history/order-history";
 import IncreaseBalanceModal from "./components/modals/increase-balance/increase-balance-modal";
 
 const App = () => {

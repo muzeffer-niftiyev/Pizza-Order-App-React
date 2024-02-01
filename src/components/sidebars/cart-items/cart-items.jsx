@@ -4,13 +4,19 @@ import {
   useState,
   useEffect,
   InfoModal,
-  CartNavbar,
+  SidebarNavbar,
   useSelector,
   CartItemData,
   sadEmojiIcon,
 } from "./index";
 
+import {
+  clearCart,
+  closeCart,
+} from "../../../features/cart-items-slice/cart-items-slice";
+
 const CartItems = () => {
+  
   const cartItems = useSelector((state) => state.cartItem.cartItems);
   const isCartOpen = useSelector((state) => state.cartItem.isCartOpen);
   const [amount, setAmount] = useState(0);
@@ -34,7 +40,7 @@ const CartItems = () => {
       <div
         className={isCartOpen ? `${styles.cont} ${styles.show}` : styles.cont}
       >
-        <CartNavbar />
+        <SidebarNavbar clearData={clearCart} closeSidebar={closeCart} title={'Cart'}/>
 
         {!cartItems.length ? (
           <p className={styles.no_item_message}>

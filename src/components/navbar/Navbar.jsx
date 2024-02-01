@@ -16,18 +16,18 @@ import { toggleHistory } from "../../features/order-history-slice/order-history-
 const Navbar = memo(() => {
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cartItem.cartItems);
-  const balance = localStorage.getItem("balance");
+  const balance = useSelector((state) => state.balance.balance);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const cartBtnHandler = () => {
     dispatch(toggleCart());
   };
 
-  const openModalHandler = () => {
+  const toggleModalHandler = () => {
     dispatch(openIncreaseBalanceModal());
   };
 
-  const openHistoryHandler = () => {
+  const toggleHistoryHandler = () => {
     dispatch(toggleHistory());
   };
 
@@ -71,10 +71,10 @@ const Navbar = memo(() => {
             </div>
 
             <div className={styles.dropdown}>
-              <div className={styles.increase} onClick={openModalHandler}>
+              <div className={styles.increase} onClick={toggleModalHandler}>
                 <p>Increase Balance</p>
               </div>
-              <div className={styles.history} onClick={openHistoryHandler}>
+              <div className={styles.history} onClick={toggleHistoryHandler}>
                 <p>Order History</p>
               </div>
             </div>
