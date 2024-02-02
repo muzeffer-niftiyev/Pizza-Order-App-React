@@ -1,10 +1,9 @@
+import { useEffect } from "react";
+import styles from "./price.module.css";
+import { useDispatch, useSelector } from "react-redux";
 import {
-  styles,
   closeCart,
   clearCart,
-  useEffect,
-  useDispatch,
-  useSelector,
   decreaseBalance,
   addOrderToHistory,
 } from "./index";
@@ -35,8 +34,8 @@ const Price = ({ amount, setOrderStatus }) => {
       dispatch(clearCart());
       dispatch(closeCart());
       setOrderStatus("success");
-      
-      if(!orderedItems) return;
+
+      if (!orderedItems) return;
       dispatch(
         addOrderToHistory({
           date: getOrderDate(),

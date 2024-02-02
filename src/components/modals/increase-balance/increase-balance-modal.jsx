@@ -1,10 +1,7 @@
-import {
-  styles,
-  useState,
-  useDispatch,
-  increaseBalance,
-  closeIncreaseBalanceModal,
-} from "./index";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import styles from "./increase-balance-modal.module.css";
+import { increaseBalance, closeIncreaseBalanceModal } from "./index";
 
 const IncreaseBalanceModal = () => {
   const dispatch = useDispatch();

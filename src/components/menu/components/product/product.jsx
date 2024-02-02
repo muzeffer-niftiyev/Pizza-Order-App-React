@@ -1,4 +1,5 @@
-import { styles, likedIcon, ProductData } from "./index";
+import styles from "./product.module.css";
+import { likedIcon, ProductData } from "./index";
 
 const Product = ({
   index,

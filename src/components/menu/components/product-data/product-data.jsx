@@ -1,4 +1,4 @@
-import { styles } from "./index";
+import styles from "./product-data.module.css";
 
 const ProductData = ({
   index,

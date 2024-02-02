@@ -1,11 +1,10 @@
+import { useSelector } from "react-redux";
+import { useEffect, useState } from "react";
+import styles from "./cart-items.module.css";
 import {
   Price,
-  styles,
-  useState,
-  useEffect,
   InfoModal,
   SidebarNavbar,
-  useSelector,
   CartItemData,
   sadEmojiIcon,
 } from "./index";
@@ -16,7 +15,6 @@ import {
 } from "../../../features/cart-items-slice/cart-items-slice";
 
 const CartItems = () => {
-  
   const cartItems = useSelector((state) => state.cartItem.cartItems);
   const isCartOpen = useSelector((state) => state.cartItem.isCartOpen);
   const [amount, setAmount] = useState(0);
@@ -40,7 +38,11 @@ const CartItems = () => {
       <div
         className={isCartOpen ? `${styles.cont} ${styles.show}` : styles.cont}
       >
-        <SidebarNavbar clearData={clearCart} closeSidebar={closeCart} title={'Cart'}/>
+        <SidebarNavbar
+          clearData={clearCart}
+          closeSidebar={closeCart}
+          title={"Cart"}
+        />
 
         {!cartItems.length ? (
           <p className={styles.no_item_message}>

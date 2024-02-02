@@ -1,4 +1,4 @@
-import { styles } from "./index";
+import styles from "./dots.module.css";
 
 const Dots = ({ goToSlide, curSlide, slideData }) => {
   return (

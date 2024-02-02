@@ -1,9 +1,12 @@
-import { styles, orderIcon, rightArrowIcon } from "./index";
-import { useSelector } from "react-redux/es/hooks/useSelector";
-import { SidebarNavbar } from "../cart-items";
-import { closeHistory } from "../../../features/order-history-slice/order-history-slice";
-import { clearHistory } from "../../../features/order-history-slice/order-history-slice";
-
+import { useSelector } from "react-redux";
+import styles from "./order-history.module.css";
+import {
+  orderIcon,
+  rightArrowIcon,
+  SidebarNavbar,
+  closeHistory,
+  clearHistory,
+} from "./index";
 
 const OrderHistory = () => {
   const isHistoryOpen = useSelector(
@@ -19,7 +22,11 @@ const OrderHistory = () => {
         isHistoryOpen ? `${styles.container} ${styles.show}` : styles.container
       }
     >
-      <SidebarNavbar clearData={clearHistory} closeSidebar={closeHistory} title={'History'}/>
+      <SidebarNavbar
+        clearData={clearHistory}
+        closeSidebar={closeHistory}
+        title={"History"}
+      />
 
       {!history?.length ? (
         <p className={styles.empty_message}>

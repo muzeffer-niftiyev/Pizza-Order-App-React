@@ -1,7 +1,7 @@
+import { useDispatch } from "react-redux";
+import styles from "./cart-item-data.module.css";
 import {
-  styles,
   trashIcon,
-  useDispatch,
   increaseCount,
   decreaseCount,
   removeFromCart,

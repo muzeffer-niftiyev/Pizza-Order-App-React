@@ -1,5 +1,4 @@
-import styles from "./info-modal.module.css";
 import errorIcon from "../../../assets/icons/error.svg";
 import successIcon from "../../../assets/icons/success.svg";
 
-export { styles, successIcon, errorIcon };
+export { successIcon, errorIcon };

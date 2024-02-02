@@ -1,10 +1,6 @@
-import {
-  cartIcon,
-  styles,
-  useDispatch,
-  leftArrowIcon,
-  clearPageIcon,
-} from "./index";
+import { useDispatch } from "react-redux";
+import styles from "./sidebar-navbar.module.css";
+import { cartIcon, leftArrowIcon, clearPageIcon } from "./index";
 
 const SidebarNavbar = ({ clearData, closeSidebar, title }) => {
   const dispatch = useDispatch();

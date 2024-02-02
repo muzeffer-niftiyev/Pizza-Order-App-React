@@ -1,4 +1,5 @@
-import { styles, successIcon, errorIcon } from "./index";
+import styles from "./info-modal.module.css";
+import { successIcon, errorIcon } from "./index";
 
 const successMessage = "Your order complated successfully!";
 const errorMessage =
