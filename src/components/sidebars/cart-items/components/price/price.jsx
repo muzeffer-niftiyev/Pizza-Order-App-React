@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import styles from "./price.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -41,17 +40,11 @@ const Price = ({ amount, setOrderStatus }) => {
           date: getOrderDate(),
           totalPrice: amount + deliveryPrice,
           items: [...orderedItems],
+          id: new Date().getTime(),
         })
       );
     }
   };
-
-  useEffect(() => {
-    localStorage.setItem(
-      "orderHistory",
-      JSON.stringify([...orderedItems, { date: getOrderDate() }])
-    );
-  }, [orderedItems]);
 
   return (
     <>

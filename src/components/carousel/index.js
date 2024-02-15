@@ -4,6 +4,6 @@ import Slides from "./components/slides/slides";
 import {
   goToSlide,
   goToNextSlide,
-} from "../../features/carousel-slice/carousel-slice";
+} from "../../features/carousel-slice";
 
 export { Dots, Slides, goToSlide, slideData, goToNextSlide };

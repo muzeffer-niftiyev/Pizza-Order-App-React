@@ -3,6 +3,6 @@ import {
   increaseCount,
   decreaseCount,
   removeFromCart,
-} from "../../../../../features/cart-items-slice/cart-items-slice";
+} from "../../../../../features/cart-items-slice";
 
 export { trashIcon, increaseCount, decreaseCount, removeFromCart };

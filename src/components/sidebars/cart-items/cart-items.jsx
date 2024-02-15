@@ -12,7 +12,7 @@ import {
 import {
   clearCart,
   closeCart,
-} from "../../../features/cart-items-slice/cart-items-slice";
+} from "../../../features/cart-items-slice";
 
 const CartItems = () => {
   const cartItems = useSelector((state) => state.cartItem.cartItems);

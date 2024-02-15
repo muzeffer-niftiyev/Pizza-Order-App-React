@@ -56,7 +56,7 @@ const drinksData = [
     ],
   },
   {
-    name: "Sparking Water",
+    name: "Sparkling Water",
     options: [
       { id: 15, size: "500 ml", price: "1.0", img: carb1 },
       { id: 16, size: "1 l", price: "2.0", img: carb2 },
