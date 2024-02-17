@@ -5,6 +5,8 @@ export const orderHistorySlice = createSlice({
   initialState: {
     orderHistory: JSON.parse(localStorage.getItem("orderHistory")) || [],
     isHistoryOpen: false,
+    isHistoryItemClicked: false,
+    clickedOrderId: null,
   },
   reducers: {
     addOrderToHistory: (state, action) => {
@@ -25,8 +27,28 @@ export const orderHistorySlice = createSlice({
     toggleHistory: (state) => {
       state.isHistoryOpen = !state.isHistoryOpen;
     },
+
+    toggleHistoryItemClicked: (state) => {
+      state.isHistoryItemClicked = !state.isHistoryItemClicked;
+    },
+
+    setClickedId: (state, action) => {
+      state.clickedOrderId = action.payload;
+    },
+
+    resetClickedId: (state) => {
+      state.clickedOrderId = null;
+    },
   },
 });
 
-export const { addOrderToHistory, clearHistory, closeHistory, toggleHistory } = orderHistorySlice.actions;
+export const {
+  setClickedId,
+  closeHistory,
+  clearHistory,
+  toggleHistory,
+  resetClickedId,
+  addOrderToHistory,
+  toggleHistoryItemClicked,
+} = orderHistorySlice.actions;
 export default orderHistorySlice.reducer;

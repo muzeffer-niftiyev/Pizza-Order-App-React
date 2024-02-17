@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import styles from "./cart-items.module.css";
+import { clearCart, closeCart } from "../../../features/cart-items-slice";
 import {
   Price,
   InfoModal,
@@ -8,11 +9,6 @@ import {
   CartItemData,
   sadEmojiIcon,
 } from "./index";
-
-import {
-  clearCart,
-  closeCart,
-} from "../../../features/cart-items-slice";
 
 const CartItems = () => {
   const cartItems = useSelector((state) => state.cartItem.cartItems);

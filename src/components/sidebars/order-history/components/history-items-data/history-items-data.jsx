@@ -1,19 +1,13 @@
-import {rightArrowIcon} from './index';
-import styles from './history-items-data.module.css';
+import { useSelector } from "react-redux";
+import styles from './history-items-data.module.css'
 
-const HistoryItemsData = ({ order }) => {
-  const formatPrice = (price) =>
-    price?.toFixed(2).toString()?.replace(".", ",");
+const HistoryItemsData = () => {
+    const history = useSelector((state) => state.orderHistory.orderHistory);
+    const orderId = useSelector((state) => state.orderHistory.clickedOrderId);
 
-  return (
-    <div className={styles.order}>
-      <h4>{order.date}</h4>
-      <div>
-        <h3>{formatPrice(order.totalPrice)}</h3>
-        <img src={rightArrowIcon} alt="arrow" />
-      </div>
-    </div>
-  );
-};
+    return (<div className={styles.box}>
+        
+    </div>)
+}
 
 export default HistoryItemsData;

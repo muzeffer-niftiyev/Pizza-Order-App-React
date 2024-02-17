@@ -5,17 +5,17 @@ const Product = ({
   index,
   product,
   selectedOption,
-  formatIngredients,
   addToCartBtnHandler,
   changeSizeBtnHandler,
 }) => {
+  const selectedProduct = product.options[selectedOption[index]];
   return (
-    <div key={product.options[selectedOption[index]].id} className={styles.box}>
+    <div key={selectedProduct.id} className={styles.box}>
       <img
         src={
           product.imgUrl
             ? product.imgUrl
-            : product.options[selectedOption[index]].img
+            : selectedProduct.img
         }
         alt="product"
       />
@@ -23,7 +23,6 @@ const Product = ({
         index={index}
         product={product}
         selectedOption={selectedOption}
-        formatIngredients={formatIngredients}
         changeSizeBtnHandler={changeSizeBtnHandler}
       />
       <button className={styles.liked_btn}>

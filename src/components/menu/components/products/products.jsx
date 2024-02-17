@@ -3,13 +3,7 @@ import { useDispatch } from "react-redux";
 import styles from "./products.module.css";
 import { addToCart, Product } from "./index";
 
-const formatIngredients = (product) => {
-  if (!product.details) return;
-  const details = product.details.split(",");
-  return details.length > 3
-    ? `${details.slice(0, 3).join(",")}...`
-    : details.join(",");
-};
+
 ///////////////////////////////////// read more kimi bir buton elave ele basanda butun ingredientler gorunsun
 ///////////////////////////////////// tezden basanda yene qisa formasi
 const Products = ({ data }) => {
@@ -44,7 +38,6 @@ const Products = ({ data }) => {
           key={index}
           product={product}
           selectedOption={selectedOption}
-          formatIngredients={formatIngredients}
           addToCartBtnHandler={addToCartBtnHandler}
           changeSizeBtnHandler={changeSizeBtnHandler}
         />

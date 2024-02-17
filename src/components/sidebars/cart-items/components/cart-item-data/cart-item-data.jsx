@@ -10,17 +10,18 @@ import {
 const CartItemData = ({ product }) => {
   const dispatch = useDispatch();
 
-  const decreaseHandler = (product) => {
+  const decreaseHandler = () => {
     dispatch(decreaseCount(product.id));
   };
 
-  const increaseHandler = (product) => {
+  const increaseHandler = () => {
     dispatch(increaseCount(product.id));
   };
 
-  const removeItemHandler = (product) => {
+  const removeItemHandler = () => {
     dispatch(removeFromCart(product.id));
   };
+
   return (
     <div className={styles.item} key={product.id}>
       <img src={product.img} alt="" />
@@ -32,13 +33,13 @@ const CartItemData = ({ product }) => {
         <span>${product.price}0</span>
       </div>
       <div className={styles.amount}>
-        <button onClick={() => decreaseHandler(product)}>-</button>
+        <button onClick={decreaseHandler}>-</button>
         <span>{product.count}</span>
-        <button onClick={() => increaseHandler(product)}>+</button>
+        <button onClick={increaseHandler}>+</button>
       </div>
       <button
         className={styles.delete_item}
-        onClick={() => removeItemHandler(product)}
+        onClick={removeItemHandler}
       >
         <img src={trashIcon} alt="" />
       </button>

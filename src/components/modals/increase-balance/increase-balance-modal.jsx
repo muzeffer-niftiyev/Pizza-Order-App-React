@@ -22,6 +22,11 @@ const IncreaseBalanceModal = () => {
     }
   };
 
+  const submitForm = (e) => {
+    e.preventDefault();
+    submitBtnHandler();
+  };
+
   const getInputData = (e) => {
     setAmount(parseInt(e.target.value, 10));
 
@@ -38,20 +43,20 @@ const IncreaseBalanceModal = () => {
           &times;
         </button>
         <h3>Increase balance</h3>
-        <div>
-          <label>Amount you want to add</label>
-          <input
-            type="number"
-            min={1}
-            max={500}
-            step={10}
-            onChange={getInputData}
-          />
-        </div>
-        {errorMessage && <p className={styles.error}>{errorMessage}</p>}
-        <button onClick={submitBtnHandler} className={styles.submit_btn}>
-          Submit
-        </button>
+        <form onSubmit={submitForm}>
+          <div>
+            <label htmlFor="amount">Amount you want to add</label>
+            <input
+              type="number"
+              id="amount"
+              onChange={getInputData}
+            />
+          </div>
+          {errorMessage && <p className={styles.error}>{errorMessage}</p>}
+          <button type="submit" className={styles.submit_btn}>
+            Submit
+          </button>
+        </form>
       </div>
     </div>
   );

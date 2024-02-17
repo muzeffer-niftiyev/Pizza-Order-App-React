@@ -1,0 +1,40 @@
+.order {
+  width: 100%;
+  border-radius: 9px;
+  padding: 20px 15px;
+  background-color: #2e3033;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  outline: none;
+  border: none;
+  color: #ecf0f1;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.order:hover {
+  box-shadow: 3px 3px 7px #222;
+}
+
+.order h4 {
+  font-size: 20px;
+  color: #c9d1dd;
+}
+
+.order h3 {
+  font-size: 22px;
+  color: #c9d1dd;
+  font-weight: bold;
+}
+
+.order div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.order img {
+  width: 40px;
+}

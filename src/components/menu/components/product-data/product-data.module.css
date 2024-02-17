@@ -53,3 +53,20 @@
   background-color: #0a506e;
   color: #ecf0f1 !important;
 }
+
+
+.show_more_btn {
+  background-color: #ecf0f1;
+  border: none;
+  border-radius: 5px;
+  padding: 2px 8px;
+  margin: 4px ;
+  color: #333;
+  font-size: 14px; 
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.show_more_btn:hover {
+  background-color: #d2d5d6;
+}
