@@ -1,4 +1,4 @@
-nav {
+.main_nav {
   background-color: #121618;
   color: #fff;
   padding: 16px 0px;
@@ -15,7 +15,7 @@ nav {
   margin: auto;
 }
 
-nav header div {
+.main_nav header div {
   display: flex;
   align-items: center;
   gap: 9px;
@@ -30,26 +30,26 @@ header span {
   font-size: 20px;
 }
 
-nav header img {
+.main_nav header img {
   width: 30px;
 }
 
-nav h1 {
+.main_nav h1 {
   font-family: "Josefin Sans", Arial, sans-serif;
   font-size: 29px;
 }
 
-nav .options {
+.main_nav .options {
   display: flex;
   gap: 30px;
   align-items: center;
 }
 
-nav .options button img {
+.main_nav .options button img {
   width: 27px;
 }
 
-nav .options > button {
+.main_nav .options > button {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -63,7 +63,7 @@ nav .options > button {
   outline: none;
 }
 
-nav .options button:hover {
+.main_nav .options button:hover {
   background-color: #1a1e21;
   cursor: pointer;
 }

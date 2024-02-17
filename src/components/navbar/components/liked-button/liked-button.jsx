@@ -1,5 +1,5 @@
 import styles from "./liked-button.module.css";
-import { likedCountIcon } from "./index";
+import { likedCountIcon } from "../../index";
 
 const LikedButton = () => {
   return (

@@ -10,7 +10,7 @@ const Navbar = memo(() => {
   );
 
   return (
-    <nav>
+    <nav className={styles.main_nav}>
       {isIncreaseBalanceModalOpen && <IncreaseBalanceModal />}
       <div className={styles.nav_cont}>
         <NavbarTitle />

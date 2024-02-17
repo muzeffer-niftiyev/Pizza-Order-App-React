@@ -1,5 +1,5 @@
-import { Links, MenuRouter } from "./index";
 import styles from "./menu.module.css";
+import { Links, MenuRouter } from "./index";
 
 const Menu = () => {
   return (

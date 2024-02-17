@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import styles from "./products.module.css";
-import { addToCart, Product } from "./index";
+import { addToCart, Product } from "../../index";
 
 
 ///////////////////////////////////// read more kimi bir buton elave ele basanda butun ingredientler gorunsun

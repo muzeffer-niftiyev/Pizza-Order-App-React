@@ -1,5 +1,5 @@
 import styles from "./product.module.css";
-import { likedIcon, ProductData } from "./index";
+import { likedIcon, ProductData } from "../../index";
 
 const Product = ({
   index,
@@ -12,11 +12,7 @@ const Product = ({
   return (
     <div key={selectedProduct.id} className={styles.box}>
       <img
-        src={
-          product.imgUrl
-            ? product.imgUrl
-            : selectedProduct.img
-        }
+        src={product.imgUrl ? product.imgUrl : selectedProduct.img}
         alt="product"
       />
       <ProductData

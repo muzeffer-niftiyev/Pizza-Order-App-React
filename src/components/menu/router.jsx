@@ -1,4 +1,5 @@
-import { Route, Routes, Products, datas } from "./index";
+import { Products, datas } from "./index";
+import { Route, Routes } from "react-router-dom";
 
 const MenuRouter = () => {
   return (

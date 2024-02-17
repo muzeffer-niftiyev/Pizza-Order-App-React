@@ -1,4 +1,4 @@
-import { rightArrowIcon } from "./index";
+import { rightArrowIcon } from "../../index";
 import styles from "./history-items.module.css";
 import { toggleHistoryItemClicked } from "../../../../../features/order-history-slice";
 import { setClickedId } from "../../../../../features/order-history-slice";

@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import styles from "./order-history.module.css";
 import {
@@ -18,11 +17,6 @@ const OrderHistory = () => {
     (state) => state.orderHistory.isHistoryItemClicked
   );
   const history = useSelector((state) => state.orderHistory.orderHistory);
-
-  useEffect(() => {
-    console.log(history);
-    console.log(history.length);
-  }, [history]);
 
   return (
     <div

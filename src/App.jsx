@@ -6,12 +6,9 @@ import CartItems from "./components/sidebars/cart-items/cart-items";
 import LikedItems from "./components/sidebars/liked-items/liked-items";
 import OrderHistory from "./components/sidebars/order-history/order-history";
 
-
 const App = () => {
-
   return (
     <div className={styles.container}>
-      
       <Navbar />
       <CartItems />
       <OrderHistory />

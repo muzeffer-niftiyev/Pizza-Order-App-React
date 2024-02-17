@@ -14,7 +14,7 @@ const SidebarNavbar = ({ clearData, closeSidebar, title }) => {
   };
 
   return (
-    <div className={styles.header}>
+    <nav className={styles.header}>
       <button onClick={closeSidebarHandler}>
         <img src={leftArrowIcon} alt="" />
       </button>
@@ -24,7 +24,7 @@ const SidebarNavbar = ({ clearData, closeSidebar, title }) => {
       <button className={styles.clear_btn} onClick={clearDataHandler}>
         Clear <img src={clearPageIcon} alt="" />
       </button>
-    </div>
+    </nav>
   );
 };
 

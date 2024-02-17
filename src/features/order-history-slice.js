@@ -10,9 +10,8 @@ export const orderHistorySlice = createSlice({
   },
   reducers: {
     addOrderToHistory: (state, action) => {
-      const updatedHistory = [...state.orderHistory, action.payload];
-      state.orderHistory = updatedHistory;
-      localStorage.setItem("orderHistory", JSON.stringify(updatedHistory));
+      state.orderHistory.unshift(action.payload);
+      localStorage.setItem("orderHistory", JSON.stringify(state.orderHistory));
     },
 
     clearHistory: (state) => {

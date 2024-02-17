@@ -17,6 +17,9 @@ const ProductData = ({
 }) => {
   const [showFullIngredients, setShowFullIngredients] = useState(false);
   const buttonCondition = product.details?.split(",").length > 3;
+  const productPrice = Number(
+    product.options[selectedOption[index]].price
+  ).toFixed(2).toString().replace('.', ',');
 
   const toggleIngredients = () => {
     setShowFullIngredients(!showFullIngredients);
@@ -47,7 +50,7 @@ const ProductData = ({
           </button>
         ))}
       </div>
-      <span>${product.options[selectedOption[index]].price}0</span>
+      <span>${productPrice}</span>
     </div>
   );
 };

@@ -1,0 +1,119 @@
+.box {
+  background-color: #282a2c;
+  height: 100%;
+  position: relative;
+}
+
+.box button {
+  margin-top: 30px;
+  margin-left: 30px;
+  background-color: inherit;
+  color: #444;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.box button img {
+  width: 30px;
+}
+
+.box > section {
+  margin-top: 5px;
+}
+
+.box section {
+  padding: 0px 30px;
+}
+
+.box .top_date {
+  font-size: 26px;
+  color: #8d8989;
+  margin-bottom: 10px;
+}
+
+.box h5 {
+  font-size: 19px;
+  color: #e9e5e5;
+  margin: 10px 0px;
+}
+
+.box p {
+  color: #e9e5e5;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.box p img {
+  width: 24px;
+}
+
+.box section h3 {
+  color: #e9e5e5;
+  font-size: 24px;
+}
+
+.orders {
+  height: 30%;
+}
+
+.box .order_item,
+.delivery div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.order_item {
+  margin: 10px 0px;
+}
+
+.order_items {
+  max-height: 100%;
+  overflow: auto;
+  padding-right: 15px;
+}
+
+.box .order_items::-webkit-scrollbar {
+  width: 7px;
+}
+
+.box .order_items::-webkit-scrollbar-track {
+    background-color: #333;
+}
+
+.box .order_items::-webkit-scrollbar-thumb{
+    background-color: #555;
+    border-radius: 10px;
+}
+
+.order_item .item_details {
+  display: flex;
+  justify-content: right;
+  gap: 35px;
+  margin-bottom: 10px;
+}
+
+.box hr {
+  margin: 12px 0px;
+}
+
+.total_price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+hr{
+    
+    outline: none;
+    border: 1px solid #4e4d4d;
+}
+
+.box .info{
+    margin-bottom: 10px;
+}

@@ -6,7 +6,7 @@ import {
   arrowDownIcon,
   toggleHistory,
   openIncreaseBalanceModal,
-} from "./index";
+} from "../../index";
 
 const BalanceButton = () => {
   const dispatch = useDispatch();

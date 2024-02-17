@@ -1,6 +1,6 @@
 import styles from "./cart-button.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { closeHistory, toggleCart, cartCountIcon } from "./index";
+import { closeHistory, toggleCart, cartCountIcon } from "../../index";
 
 const CartButton = () => {
   const dispatch = useDispatch();

@@ -5,7 +5,7 @@ import {
   increaseCount,
   decreaseCount,
   removeFromCart,
-} from "./index";
+} from "../../index";
 
 const CartItemData = ({ product }) => {
   const dispatch = useDispatch();
@@ -30,17 +30,14 @@ const CartItemData = ({ product }) => {
           <h3>{product.name}</h3>
           <span>({product.size})</span>
         </div>
-        <span>${product.price}0</span>
+        <span>${Number(product.price).toFixed(2)}</span>
       </div>
       <div className={styles.amount}>
         <button onClick={decreaseHandler}>-</button>
         <span>{product.count}</span>
         <button onClick={increaseHandler}>+</button>
       </div>
-      <button
-        className={styles.delete_item}
-        onClick={removeItemHandler}
-      >
+      <button className={styles.delete_item} onClick={removeItemHandler}>
         <img src={trashIcon} alt="" />
       </button>
     </div>

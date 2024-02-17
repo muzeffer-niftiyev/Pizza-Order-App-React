@@ -5,7 +5,7 @@ import {
   clearCart,
   decreaseBalance,
   addOrderToHistory,
-} from "./index";
+} from "../../index";
 
 const Price = ({ amount, setOrderStatus }) => {
   const orderedItems = useSelector((state) => state.cartItem.cartItems);
