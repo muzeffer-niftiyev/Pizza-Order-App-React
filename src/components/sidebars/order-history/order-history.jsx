@@ -3,11 +3,11 @@ import styles from "./order-history.module.css";
 import {
   orderIcon,
   HistoryItems,
-  SidebarNavbar,
-  closeHistory,
   clearHistory,
+  closeHistory,
+  SidebarNavbar,
+  HistoryItemsData,
 } from "./index";
-import HistoryItemsData from "./components/history-items-data/history-items-data";
 
 const OrderHistory = () => {
   const isHistoryOpen = useSelector(

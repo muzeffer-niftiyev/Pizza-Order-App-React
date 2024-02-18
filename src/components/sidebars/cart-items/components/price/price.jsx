@@ -7,11 +7,12 @@ import {
   addOrderToHistory,
 } from "../../index";
 
+const deliveryPrice = 5;
+const balance = localStorage.getItem("balance");
+
 const Price = ({ amount, setOrderStatus }) => {
   const orderedItems = useSelector((state) => state.cartItem.cartItems);
   const dispatch = useDispatch();
-  const balance = localStorage.getItem("balance");
-  const deliveryPrice = 5; // helelik sabit value'di user seciminden asili olaraq hesablanacaq qiymet
 
   const getOrderDate = () => {
     const date = new Date();

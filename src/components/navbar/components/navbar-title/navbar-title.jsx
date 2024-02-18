@@ -1,4 +1,4 @@
-import pizzaIcon from "../../../../assets/icons/header-pizza-icon.svg";
+import {pizzaIcon} from "../../index";
 
 const NavbarTitle = () => {
   return (

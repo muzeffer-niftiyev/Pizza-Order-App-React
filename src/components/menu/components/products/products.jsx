@@ -3,9 +3,6 @@ import { useDispatch } from "react-redux";
 import styles from "./products.module.css";
 import { addToCart, Product } from "../../index";
 
-
-///////////////////////////////////// read more kimi bir buton elave ele basanda butun ingredientler gorunsun
-///////////////////////////////////// tezden basanda yene qisa formasi
 const Products = ({ data }) => {
   const dispatch = useDispatch();
   const [selectedOption, setSelectedOption] = useState(data.map(() => 0));

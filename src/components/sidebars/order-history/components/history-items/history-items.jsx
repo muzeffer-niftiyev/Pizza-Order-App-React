@@ -1,8 +1,10 @@
-import { rightArrowIcon } from "../../index";
-import styles from "./history-items.module.css";
-import { toggleHistoryItemClicked } from "../../../../../features/order-history-slice";
-import { setClickedId } from "../../../../../features/order-history-slice";
 import { useDispatch } from "react-redux";
+import styles from "./history-items.module.css";
+import {
+  setClickedId,
+  rightArrowIcon,
+  toggleHistoryItemClicked,
+} from "../../index";
 
 const HistoryItems = ({ order }) => {
   const dispatch = useDispatch();
@@ -12,7 +14,7 @@ const HistoryItems = ({ order }) => {
 
   const handleOrderClick = (id) => {
     dispatch(toggleHistoryItemClicked());
-    dispatch(setClickedId(id))
+    dispatch(setClickedId(id));
   };
 
   return (

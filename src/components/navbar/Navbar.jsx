@@ -1,8 +1,13 @@
 import { memo } from "react";
 import styles from "./navbar.module.css";
-import { NavbarTitle, LikedButton, CartButton, BalanceButton } from "./index";
 import { useSelector } from "react-redux";
-import IncreaseBalanceModal from "../modals/increase-balance/increase-balance-modal";
+import {
+  CartButton,
+  LikedButton,
+  NavbarTitle,
+  BalanceButton,
+  IncreaseBalanceModal,
+} from "./index";
 
 const Navbar = memo(() => {
   const isIncreaseBalanceModalOpen = useSelector(

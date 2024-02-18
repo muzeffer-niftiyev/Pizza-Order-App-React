@@ -1,0 +1,50 @@
+.orders {
+  height: 30%;
+}
+
+.order_items {
+  max-height: 100%;
+  overflow: auto;
+  padding-right: 15px;
+}
+
+.order_items::-webkit-scrollbar {
+  width: 7px;
+}
+
+.order_items::-webkit-scrollbar-track {
+  background-color: #333;
+}
+
+.order_items::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 10px;
+}
+
+.order_item {
+  margin: 10px 0px;
+}
+
+.order_item .item_details {
+  display: flex;
+  justify-content: right;
+  gap: 35px;
+  margin-bottom: 10px;
+}
+
+.order_item,
+.delivery div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.total_price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.box .info {
+  margin-bottom: 10px;
+}

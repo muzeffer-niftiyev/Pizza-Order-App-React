@@ -46,11 +46,7 @@ const IncreaseBalanceModal = () => {
         <form onSubmit={submitForm}>
           <div>
             <label htmlFor="amount">Amount you want to add</label>
-            <input
-              type="number"
-              id="amount"
-              onChange={getInputData}
-            />
+            <input type="number" id="amount" onChange={getInputData} />
           </div>
           {errorMessage && <p className={styles.error}>{errorMessage}</p>}
           <button type="submit" className={styles.submit_btn}>
