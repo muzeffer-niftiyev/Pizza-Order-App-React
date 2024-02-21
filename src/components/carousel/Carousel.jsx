@@ -3,7 +3,7 @@ import styles from "./carousel.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { Dots, Slides, goToSlide, slideData, goToNextSlide } from "./index";
 
-const Carousel = () => {
+const Carousel = ({ menuRef }) => {
   const curSlide = useSelector((state) => state.carousel.curSlide);
   const dispatch = useDispatch();
 
@@ -21,7 +21,7 @@ const Carousel = () => {
 
   return (
     <div className={styles.carousel}>
-      <Slides slideData={slideData} curSlide={curSlide} />
+      <Slides slideData={slideData} curSlide={curSlide} menuRef={menuRef} />
       <Dots
         slideData={slideData}
         curSlide={curSlide}

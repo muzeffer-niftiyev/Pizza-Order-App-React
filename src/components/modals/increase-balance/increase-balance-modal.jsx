@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import styles from "./increase-balance-modal.module.css";
 import { increaseBalance, closeIncreaseBalanceModal } from "./index";
@@ -7,7 +7,7 @@ const IncreaseBalanceModal = () => {
   const dispatch = useDispatch();
   const [amount, setAmount] = useState(0);
   const [errorMessage, setErrorMessage] = useState("");
-
+  const inputRef = useRef();
   const isAmountValid = !(amount <= 0 || amount > 500 || isNaN(amount));
 
   const submitBtnHandler = () => {
@@ -36,6 +36,11 @@ const IncreaseBalanceModal = () => {
   };
 
   const closeModalHandler = () => dispatch(closeIncreaseBalanceModal());
+
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
+
   return (
     <div className={styles.box}>
       <div className={styles.content}>
@@ -46,7 +51,12 @@ const IncreaseBalanceModal = () => {
         <form onSubmit={submitForm}>
           <div>
             <label htmlFor="amount">Amount you want to add</label>
-            <input type="number" id="amount" onChange={getInputData} />
+            <input
+              type="number"
+              ref={inputRef}
+              id="amount"
+              onChange={getInputData}
+            />
           </div>
           {errorMessage && <p className={styles.error}>{errorMessage}</p>}
           <button type="submit" className={styles.submit_btn}>

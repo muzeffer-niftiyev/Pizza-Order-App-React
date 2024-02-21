@@ -31,6 +31,10 @@ export const orderHistorySlice = createSlice({
       state.isHistoryItemClicked = !state.isHistoryItemClicked;
     },
 
+    closeClickedHistoryItem: (state) => {
+      state.isHistoryItemClicked = false;
+    },
+
     setClickedId: (state, action) => {
       state.clickedOrderId = action.payload;
     },
@@ -48,6 +52,7 @@ export const {
   toggleHistory,
   resetClickedId,
   addOrderToHistory,
+  closeClickedHistoryItem,
   toggleHistoryItemClicked,
 } = orderHistorySlice.actions;
 export default orderHistorySlice.reducer;

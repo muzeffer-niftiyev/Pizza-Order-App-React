@@ -1,6 +1,11 @@
 import styles from "./slides.module.css";
 
-const Slides = ({ curSlide, slideData }) => {
+const Slides = ({ curSlide, slideData, menuRef }) => {
+  const handleGoToMenu = () => {
+    if (!menuRef) return;
+    menuRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className={styles.slides}>
       {slideData.map((slide, index) => (
@@ -14,9 +19,7 @@ const Slides = ({ curSlide, slideData }) => {
             <h1>{slide.header}</h1>
             <p>{slide.firstText}</p>
             <p>{slide.secondText}</p>
-            <a href="###">
-              <button>View Menu</button>
-            </a>
+            <button onClick={handleGoToMenu}>View Menu</button>
           </div>
 
           <div className={styles.image}>

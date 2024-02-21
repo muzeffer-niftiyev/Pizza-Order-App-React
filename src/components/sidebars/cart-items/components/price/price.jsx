@@ -7,13 +7,13 @@ import {
   addOrderToHistory,
 } from "../../index";
 
-const deliveryPrice = 5;
-const balance = localStorage.getItem("balance");
 
 const Price = ({ amount, setOrderStatus }) => {
+  const deliveryPrice = 5;
   const orderedItems = useSelector((state) => state.cartItem.cartItems);
   const dispatch = useDispatch();
-
+  const balance = localStorage.getItem("balance");
+  
   const getOrderDate = () => {
     const date = new Date();
     const day = date.getDate().toString().padStart(2, "0");

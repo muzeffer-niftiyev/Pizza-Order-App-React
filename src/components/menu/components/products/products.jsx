@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import styles from "./products.module.css";
-import { addToCart, Product } from "../../index";
+import { addToCart, ProductData } from "../../index";
 
 const Products = ({ data }) => {
   const dispatch = useDispatch();
@@ -27,17 +27,35 @@ const Products = ({ data }) => {
     setSelectedOption(newIndices);
   };
 
+  const getSelectedProduct = (product, index) => {
+    return product.options[selectedOption[index]];
+  };
+
   return (
     <div className={styles.container}>
       {data.map((product, index) => (
-        <Product
-          index={index}
-          key={index}
-          product={product}
-          selectedOption={selectedOption}
-          addToCartBtnHandler={addToCartBtnHandler}
-          changeSizeBtnHandler={changeSizeBtnHandler}
-        />
+        <div key={getSelectedProduct(product, index).id} className={styles.box}>
+          <img
+            src={
+              product.imgUrl
+                ? product.imgUrl
+                : getSelectedProduct(product, index).img
+            }
+            alt="product"
+          />
+          <ProductData
+            index={index}
+            product={product}
+            selectedOption={selectedOption}
+            changeSizeBtnHandler={changeSizeBtnHandler}
+          />
+          <button
+            className={styles.cart_btn}
+            onClick={() => addToCartBtnHandler(product, index)}
+          >
+            Add to cart
+          </button>
+        </div>
       ))}
     </div>
   );

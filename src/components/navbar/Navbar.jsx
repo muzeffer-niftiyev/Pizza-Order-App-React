@@ -3,7 +3,6 @@ import styles from "./navbar.module.css";
 import { useSelector } from "react-redux";
 import {
   CartButton,
-  LikedButton,
   NavbarTitle,
   BalanceButton,
   IncreaseBalanceModal,
@@ -20,7 +19,6 @@ const Navbar = memo(() => {
       <div className={styles.nav_cont}>
         <NavbarTitle />
         <div className={styles.options}>
-          <LikedButton />
           <CartButton />
           <BalanceButton />
         </div>

@@ -6,6 +6,7 @@ import {
   arrowDownIcon,
   toggleHistory,
   openIncreaseBalanceModal,
+  closeClickedHistoryItem,
 } from "../../index";
 
 const BalanceButton = () => {
@@ -20,6 +21,7 @@ const BalanceButton = () => {
   const toggleHistoryHandler = () => {
     dispatch(closeCart());
     dispatch(toggleHistory());
+    dispatch(closeClickedHistoryItem());
   };
 
   return (
