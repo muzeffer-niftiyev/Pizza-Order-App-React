@@ -1,11 +1,10 @@
 .main_nav {
   background-color: #121618;
-  opacity: .97;
   color: #fff;
   padding: 16px 0px;
   position: fixed;
   width: 100%;
-  z-index: 111111111111111111111111111111;
+  z-index: 1111111111111111111111111 !important;
 }
 
 .nav_cont {
