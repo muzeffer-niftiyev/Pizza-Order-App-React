@@ -1,29 +1,30 @@
 .order {
   width: 100%;
-  border-radius: 9px;
-  padding: 20px 15px;
+  border-radius: .9rem;
+  padding: 2rem 1.5rem;
   background-color: #2e3033;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  gap: 1rem;
   outline: none;
   border: none;
   color: #ecf0f1;
   cursor: pointer;
   transition: all 0.3s;
 }
+
 .order:hover {
-  box-shadow: 3px 3px 7px #222;
+  box-shadow: .3rem .3rem .7rem #222;
 }
 
 .order h4 {
-  font-size: 20px;
+  font-size: 2rem;
   color: #c9d1dd;
 }
 
 .order h3 {
-  font-size: 22px;
+  font-size: 2.2rem;
   color: #c9d1dd;
   font-weight: bold;
 }
@@ -32,7 +33,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 1rem;
 }
 
 .order img {

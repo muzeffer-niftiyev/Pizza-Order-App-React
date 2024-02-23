@@ -5,54 +5,54 @@
 }
 
 .box button {
-  margin-top: 30px;
-  margin-left: 30px;
+  margin-top: 3rem;
+  margin-left: 3rem;
   background-color: inherit;
   color: #444;
   border: none;
   outline: none;
   cursor: pointer;
-  font-size: 30px;
+  font-size: 3rem;
   font-weight: bolder;
 }
 
 .box button img {
-  width: 30px;
+  width: 3rem;
 }
 
 .box > section {
-  margin-top: 5px;
+  margin-top: .5rem;
 }
 
 .box section {
-  padding: 0px 30px;
+  padding: 0rem 3rem;
 }
 
 .box h5 {
-  font-size: 19px;
+  font-size: 1.9rem;
   color: #e9e5e5;
-  margin: 10px 0px;
+  margin: 1rem 0rem;
 }
 
 .box p {
   color: #e9e5e5;
-  font-size: 18px;
+  font-size: 1.8rem;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 1rem;
 }
 
 .box p img {
-  width: 24px;
+  width: 2.4rem;
 }
 
 .box section h3 {
   color: #e9e5e5;
-  font-size: 24px;
+  font-size: 2.4rem;
 }
 
 hr {
-  margin: 12px 0px;
+  margin: 1.2rem 0rem;
   outline: none;
   border: 1px solid #4e4d4d;
 }

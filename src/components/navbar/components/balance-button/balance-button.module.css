@@ -4,30 +4,30 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 5px;
-  padding: 15px;
-  border-radius: 7px;
+  gap: .5rem;
+  padding: 1.5rem;
+  border-radius: .7rem;
 }
 
 .balance div {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 1rem;
 }
 
 .balance span {
-  font-size: 21px;
+  font-size: 2.1rem;
   font-weight: bold;
 }
 
 .balance p {
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: lighter;
 }
 
 .balance img {
-  width: 30px;
+  width: 3rem;
 }
 
 .balance .dropdown {
@@ -38,14 +38,14 @@
   position: absolute;
   color: #bbbdbe;
   top: 100%;
-  gap: 7px;
+  gap: .7rem;
   width: 100%;
 }
 
 .dropdown .history,
 .dropdown .increase {
   width: 100%;
-  padding: 7px;
+  padding: .7rem;
   background-color: inherit;
   border: none;
   outline: none;
@@ -58,7 +58,7 @@
 }
 
 .balance .dropdown p {
-  font-size: 20px;
+  font-size: 2rem;
 }
 
 .balance.dropdownIsOpen {
@@ -77,4 +77,14 @@
 .balance.dropdownIsOpen .dropdown .history {
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
+}
+
+@media screen and (max-width: 500px){
+  .balance span{
+    font-size: 1.9rem;
+  }
+
+  .balance .dropdown p{
+    font-size: 1.8rem;
+  }
 }

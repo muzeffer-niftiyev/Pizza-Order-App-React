@@ -2,9 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 30px;
+  padding-top: 3rem;
   width: 80%;
-  height: 40px;
+  height: 4rem;
   margin: auto;
 }
 
@@ -12,31 +12,38 @@
 .header .clear_btn {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: .8rem;
   color: #444;
 }
 
 .header h2 {
-  font-size: 27px;
+  font-size: 2.7rem;
 }
 
 .header .clear_btn {
-  font-size: 22px;
+  font-size: 2.2rem;
 }
 
 .header button {
   background-color: inherit;
   border: none;
   outline: none;
-  font-size: 30px;
+  font-size: 3rem;
   font-weight: bolder;
   cursor: pointer;
 }
 
 .header img {
-  width: 25px;
+  width: 2.5rem;
 }
 
 .clear_btn img {
-  width: 19px !important;
+  width: 1.9rem !important;
+}
+
+
+@media screen and (max-width: 900px) {
+  .header{
+    width: 70%;
+  }
 }

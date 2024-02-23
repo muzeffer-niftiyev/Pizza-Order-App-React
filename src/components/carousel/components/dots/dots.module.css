@@ -1,13 +1,13 @@
 .dots {
   position: absolute;
-  bottom: 140px;
+  bottom: 14rem;
   z-index: 112121253;
 }
 
 .dots button {
-  width: 26px;
-  height: 26px;
-  margin: 0px 8px;
+  width: 2.6rem;
+  height: 2.6rem;
+  margin: 0rem .8rem;
   border-radius: 50%;
   background: none;
   border: 3px solid gray;
@@ -15,8 +15,8 @@
 }
 
 .dots button span {
-  width: 14px;
-  height: 14px;
+  width: 1.4rem;
+  height: 1.4rem;
   background-color: gray;
   border-radius: 50%;
   margin: auto;
@@ -29,5 +29,53 @@
   }
   .active span {
     background-color: #fff;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .dots{
+    bottom: 10rem;
+  }
+
+  .dots button{
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  .dots button span{
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px){
+  .dots{
+    bottom: 9rem;
+  }
+
+  .dots button{
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  .dots button span{
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+}
+
+@media screen and (min-width: 901px) and (max-width: 1400px) {
+  .dots{
+    bottom: 9rem;
+  }
+
+  .dots button{
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .dots button span{
+    width: 1.5rem;
+    height: 1.5rem;
   }
 }

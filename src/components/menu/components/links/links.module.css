@@ -1,15 +1,15 @@
 .menu_options {
-  margin-bottom: 70px;
+  margin-bottom: 7rem;
 }
 
 .menu_options a {
   border: 1px solid #fac564;
   background-color: transparent;
   color: #fac564;
-  padding: 15px 30px;
-  font-size: 20px;
+  padding: 1.5rem 3rem;
+  font-size: 2rem;
   cursor: pointer;
-  margin-right: 10px;
+  margin-right: 1rem;
   transition: all 0.3s;
   text-decoration: none;
 }

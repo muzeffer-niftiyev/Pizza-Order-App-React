@@ -1,31 +1,32 @@
 .item {
   width: 100%;
-  border-radius: 9px;
-  padding: 10px 15px;
+  border-radius: .9rem;
+  padding: 1rem 1.5rem;
   background-color: #2e3033;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  gap: 1rem;
   color: #ecf0f1;
   cursor: pointer;
   transition: all 0.3s;
 }
 
 .item:hover {
-  box-shadow: 3px 3px 7px #222;
+  box-shadow: .3rem .3rem .7rem #222;
 }
 
 .item img {
-  width: 80px;
+  width: 8rem;
 }
 
 .amount {
-  margin-left: 25px;
+  margin-left: 2.5rem;
+  font-size: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 7px;
+  gap: .7rem;
   color: #ecf0f1;
 }
 
@@ -33,7 +34,7 @@
   background-color: inherit;
   border: none;
   outline: none;
-  font-size: 32px;
+  font-size: 3.2rem;
   color: #ecf0f1;
   cursor: pointer;
   transform: translateY(-5px);
@@ -43,23 +44,29 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5px;
+  gap: .5rem;
+  font-size: 1.6rem;
+}
+
+.datas> span{
+  font-size: 1.5rem;
 }
 
 .amount span {
   background-color: #282a2c;
-  padding: 5px 10px;
+  padding: .5rem 1rem;
+  font-size: 1.8rem;
 }
 
 .delete_item {
   background-color: rgba(201, 23, 23);
   border: none;
   outline: none;
-  padding: 5px;
-  border-radius: 5px;
+  padding: .5rem;
+  border-radius: .5rem;
   cursor: pointer;
 }
 
 .delete_item img {
-  width: 23px;
+  width: 2.3rem;
 }
