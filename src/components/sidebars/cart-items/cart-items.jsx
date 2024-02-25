@@ -6,9 +6,9 @@ import {
   InfoModal,
   clearCart,
   closeCart,
-  SidebarNavbar,
   CartItemData,
   sadEmojiIcon,
+  SidebarNavbar,
 } from "./index";
 
 const CartItems = () => {

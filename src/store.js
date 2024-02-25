@@ -6,9 +6,9 @@ import orderHistoryReducer from "./features/order-history-slice";
 
 export default configureStore({
   reducer: {
+    balance: balanceReducer,
     carousel: carouselReducer,
     cartItem: cartItemsReducer,
-    balance: balanceReducer,
     orderHistory: orderHistoryReducer,
   },
 });

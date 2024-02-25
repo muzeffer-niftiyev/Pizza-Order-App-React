@@ -10,7 +10,7 @@ export const carouselSlice = createSlice({
     goToNextSlide: (state) => {
       state.curSlide = (state.curSlide + 1) % slideData.length;
     },
-    
+
     goToSlide: (state, action) => {
       state.curSlide = action.payload;
     },

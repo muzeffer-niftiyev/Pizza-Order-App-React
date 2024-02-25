@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from "react";
 import { useDispatch } from "react-redux";
+import { useEffect, useRef, useState } from "react";
 import styles from "./increase-balance-modal.module.css";
 import { increaseBalance, closeIncreaseBalanceModal } from "./index";
 

@@ -5,8 +5,8 @@ import {
   closeCart,
   arrowDownIcon,
   toggleHistory,
-  openIncreaseBalanceModal,
   closeClickedHistoryItem,
+  openIncreaseBalanceModal,
 } from "../../index";
 
 const BalanceButton = () => {
