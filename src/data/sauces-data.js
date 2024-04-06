@@ -1,6 +1,4 @@
-import mayo from "../assets/img/sauces/mayo.png";
-import ketchup from "../assets/img/sauces/ketchup.png";
-import mustard from "../assets/img/sauces/mustard.png";
+import { mayo, ketchup, mustard } from '../assets/img/sauces';
 
 const saucesData = [
   {

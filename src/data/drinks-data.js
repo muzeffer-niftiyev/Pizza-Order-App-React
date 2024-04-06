@@ -1,19 +1,21 @@
-import carb2 from "../assets/img/drinks/carb-1-l.png";
-import fanta3 from "../assets/img/drinks/fanta-1-l.png";
-import pepsi3 from "../assets/img/drinks/pepsi-1-l.png";
-import still2 from "../assets/img/drinks/still-1-l.png";
-import carb1 from "../assets/img/drinks/carb-500-ml.png";
-import sprite3 from "../assets/img/drinks/sprite-1-l.png";
-import still1 from "../assets/img/drinks/still-500-ml.png";
-import pepsi1 from "../assets/img/drinks/pepsi-330-ml.png";
-import pepsi2 from "../assets/img/drinks/pepsi-500-ml.png";
-import fanta1 from "../assets/img/drinks/fanta-330-ml.png";
-import fanta2 from "../assets/img/drinks/fanta-500-ml.png";
-import fuse1 from "../assets/img/drinks/fuse-tea-limon.png";
-import fuse2 from "../assets/img/drinks/fuse-tea-mango.png";
-import sprite1 from "../assets/img/drinks/sprite-330-ml.png";
-import sprite2 from "../assets/img/drinks/sprite-500-ml.png";
-import fuse3 from "../assets/img/drinks/fuse-tea-watermelon.png";
+import {
+  carb1,
+  carb2,
+  fuse1,
+  fuse2,
+  fuse3,
+  fanta1,
+  fanta2,
+  pepsi1,
+  pepsi2,
+  pepsi3,
+  fanta3,
+  still1,
+  still2,
+  sprite1,
+  sprite2,
+  sprite3,
+} from "../assets/img/drinks";
 
 const drinksData = [
   {
