@@ -26,7 +26,7 @@ This project is simple example of food ordering app.
 
 ## 🚀 Demo
 
-[🔗 Pizza Order App](https://pizza-order-app-reactjs.netlify.app/)
+[🔗 Pizza Order App](https://pizza-order-app-react-8rlt.vercel.app/)
 
 ---
 
