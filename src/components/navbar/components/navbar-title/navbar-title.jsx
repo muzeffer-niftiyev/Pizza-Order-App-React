@@ -1,10 +1,10 @@
-import {pizzaIcon} from "../../index";
+import { mainPizzaIcon } from "../../index";
 
 const NavbarTitle = () => {
   return (
     <header>
       <div>
-        <img src={pizzaIcon} alt="" />
+        <img src={mainPizzaIcon} alt="" />
         <h1>Pizza</h1>
       </div>
       <span>House</span>

@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import styles from "./sidebar-navbar.module.css";
-import { cartIcon, leftArrowIcon, clearPageIcon } from "./index";
+import { redCartIcon, leftArrowIcon, clearItemsIcon } from "./index";
 
 const SidebarNavbar = ({ clearData, closeSidebar, title }) => {
   const dispatch = useDispatch();
@@ -19,10 +19,10 @@ const SidebarNavbar = ({ clearData, closeSidebar, title }) => {
         <img src={leftArrowIcon} alt="" />
       </button>
       <h2>
-        {title} <img src={cartIcon} alt="icon" />
+        {title} <img src={redCartIcon} alt="icon" />
       </h2>
       <button className={styles.clear_btn} onClick={clearDataHandler}>
-        Clear <img src={clearPageIcon} alt="" />
+        Clear <img src={clearItemsIcon} alt="" />
       </button>
     </nav>
   );

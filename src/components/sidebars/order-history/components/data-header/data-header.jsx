@@ -2,9 +2,9 @@ import { useDispatch } from "react-redux";
 import styles from "./data-header.module.css";
 import {
   cartIcon,
-  leftArrowIcon,
   deliveredIcon,
   resetClickedId,
+  leftArrowWhiteIcon,
   toggleHistoryItemClicked,
 } from "../../index";
 
@@ -55,7 +55,7 @@ const DataHeader = ({ setSelectedOrder, selectedOrder, formatPrice }) => {
   return (
     <>
       <button onClick={backBtnHandler}>
-        <img src={leftArrowIcon} alt="" />
+        <img src={leftArrowWhiteIcon} alt="" />
       </button>
       <section>
         <h3 className={styles.top_date}>
